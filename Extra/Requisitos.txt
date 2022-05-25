@@ -3,8 +3,11 @@ TODO:
 
 Requisitos
 
-Caso de Uso
-“O José entra na aplicação e faz login. Ele procura um filme e adiciona á sua Watchlist. Após isto, vai ver as reviews de uma série que estava a pensar começar a ver, e adiciona-a também á sua lista. Começa então a ver a série que adicionou, e regista na aplicação o seu progresso (ele viu 3 episódios, cada um 20 minutos). Depois de adicionar o seu progresso, consegue visualizar quantos episódios da série já viu, quanto tempo é que passou a ver todas as séries e filmes que adicionou á sua lista. ”
+Caso de Uso 1
+“O José entra na aplicação e faz login. Ele procura um filme e adiciona á sua Watchlist. Após isto, vai ver as reviews de uma série que estava a pensar começar a ver, e adiciona-a também á sua lista. Começa então a ver a série que adicionou, e regista na aplicação o seu progresso (ele viu 3 episódios, cada um 20 minutos). Depois de adicionar o seu progresso, consegue visualizar quantos episódios da série já viu, quanto tempo é que passou a ver todas as séries e filmes que adicionou á sua lista.”
+
+Caso de Uso 2
+O José entra na aplicação e regista-se. Depois de se registar, vai fazer o login. Ele começa por procurar por um filme que estava a pensar ver, e adiciona-o á sua lista. Ele vê que o filme está disponível na Netflix, e começa a ver. Quando acabou de ver, ele volta a entrar na aplicação, e coloca o filme como "Visto", e dá uma review. No dia seguinte, ele volta a entrar na aplicação, e adiciona um série á lista. Nesse mesmo dia, ele visualiza 3 episódios dessa série, 20 minutos por episódio, e atualiza o seu progresso. Quando ele clica na sua página, ele consegue visualizar que tem um filme visto, e uma série em progresso. Ele também vê que passou 3 horas agarrado á televisão, só a ver séries e filmes.
 
 Requisitos Funcionais
 - Deve ser possível registar na plataforma.
