@@ -1,20 +1,22 @@
 import { useEffect, useState } from "react"
 
-export default function Login() {
+export default function Signup() {
     const [username, setUsername] = useState("")
     const [password, setPassword] = useState("")
-    const [toggle, setToggle] = useState(false)
+    const [confirmPassword, setConfirmedPassword] = useState("")
     const [errors, setErrors] = useState([])
 
     function handleUserInput(e, input) {
-        input === "username" ? setUsername(e.target.value.trimStart()) : setPassword(e.target.value.trimStart())
+        if (input === "username") setUsername(e.target.value.trimStart())
+        else if (input === "password") setPassword(e.target.value.trimStart())
+        else setConfirmedPassword(e.target.value.trimStart())
     }
 
     function handleSubmit(e) {
-        console.log(username, password)
+        console.log(username, password, confirmPassword)
         e.preventDefault()
 
-        // TODO Validações Login Frontend
+        // TODO Validações Signup Frontend
 
         // Vai enviar para o back-end
     }
@@ -27,11 +29,9 @@ export default function Login() {
                 <label>Username</label>
                 <input type="text" value={username} onChange={(e) => handleUserInput(e, "username")} /> <br />
                 <label>Password</label>
-                <input type={toggle ? "text" : "password"} value={password} onChange={(e) => handleUserInput(e, "password")}></input>
-                <button type="button"
-                    onMouseDown={() => setToggle(!toggle)}
-                    onMouseUp={() => setToggle(!toggle)}
-                >Mostrar</button>
+                <input type="password" value={password} onChange={(e) => handleUserInput(e, "password")}></input> <br />
+                <label>Confirm Password</label>
+                <input type="password" value={confirmPassword} onChange={(e) => handleUserInput(e, "confirmPassword")}></input>
                 <input type="submit"></input>
             </form>
         </div>

@@ -1,0 +1,4 @@
+Lista de Routes
+
+/login -> Página de login
+/signup -> Página de Registar
