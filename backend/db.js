@@ -26,6 +26,11 @@ async function getMongoCollection(dbName, collectionName) {
     return client.db(dbName).collection(collectionName)
 }
 
+async function getCollection(collectionName) {
+    const client = await connectToMongo()
+    return client.db("projetofinal").collection(collectionName)
+}
+
 module.exports = {
     DATABASE_NAME,
     COLLECTION_USER,
