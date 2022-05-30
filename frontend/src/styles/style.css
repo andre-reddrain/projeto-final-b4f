@@ -46,3 +46,63 @@ height: 30px;
 .visto {
     width: 200px;
 }
+ .caixa1 {
+     width: 350px;
+     height:35px;
+     box-shadow:none;
+}
+.name1{
+    width: 200px;
+    height: 35px;
+}
+.text1{
+    color:white;
+}
+.caixaemail{
+    width: 410px;
+    height: 35px;
+}
+.password{
+    width: 200px;
+    height: 35px;
+}
+.rectangle {
+        height: 150px;
+        width: 240px;
+        background-color:black;
+}
+
+.searchbar {
+        box-sizing: border-box;
+      }
+      
+      form.searchbar input[type=text] {
+        padding: 10px;
+        font-size: 17px;
+        border: 1px solid grey;
+        float: left;
+        width: 30%;
+        background: #f1f1f1;
+      }
+      
+      form.searchbar button {
+        float: left;
+        width: 5%;
+        padding: 20px;
+        background: #2196F3;
+        color: white;
+        font-size: 17px;
+        border: 1px solid grey;
+        border-left: none; 
+        cursor: pointer;
+      }
+      
+      form.searchbar button:hover {
+        background: #0b7dda;
+      }
+      
+      form.searchbar::after {
+        content: "";
+        clear: both;
+        display: table;
+      }
