@@ -1,22 +1,45 @@
 import { useEffect, useState } from "react"
+import { useNavigate } from "react-router-dom"
 
 export default function Login() {
-    const [username, setUsername] = useState("")
+    const [email, setEmail] = useState("")
     const [password, setPassword] = useState("")
     const [toggle, setToggle] = useState(false)
     const [errors, setErrors] = useState([])
+    const navigate = useNavigate()
 
     function handleUserInput(e, input) {
-        input === "username" ? setUsername(e.target.value.trimStart()) : setPassword(e.target.value.trimStart())
+        input === "email" ? setEmail(e.target.value.trimStart()) : setPassword(e.target.value.trimStart())
     }
 
     function handleSubmit(e) {
-        console.log(username, password)
         e.preventDefault()
 
         // TODO Validações Login Frontend
 
-        // Vai enviar para o back-end
+        login(email, password) // Vai enviar para o back-end
+    }
+
+    useEffect(() => {
+        localStorage.setItem('token', null)
+    }, [])
+
+    async function login(email, password) {
+        const res = await fetch("/login", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                email: email,
+                password: password
+            })
+        })
+        const json = await res.json()
+        if (res.status != 400) {
+            localStorage.setItem('token', json.token)
+            navigate("/list")
+        }
     }
 
     return (
@@ -24,8 +47,8 @@ export default function Login() {
             <form onSubmit={handleSubmit}>
                 {errors.length > 0
                     && <span style={{ color: "red" }}>{errors}</span>}
-                <label>Username</label>
-                <input type="text" value={username} onChange={(e) => handleUserInput(e, "username")} /> <br />
+                <label>Email</label>
+                <input type="text" value={email} onChange={(e) => handleUserInput(e, "email")} /> <br />
                 <label>Password</label>
                 <input type={toggle ? "text" : "password"} value={password} onChange={(e) => handleUserInput(e, "password")}></input>
                 <button type="button"

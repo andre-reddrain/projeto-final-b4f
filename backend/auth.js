@@ -86,15 +86,27 @@ const testPasswordConfirmation = (password, passwordConfirmation) => {
     return {} //ou null
 }
 const testBirthday = (birthday) => {
-    var ageDifMs = Date.now() - new Date(birthday).getTime();
-    var ageDate = new Date(ageDifMs); // miliseconds from epoch
-    let age = Math.abs(ageDate.getUTCFullYear() - 1970);
+    if(birthday){
+        if(Date.parse(birthday) >= 0){
+            var ageDifMs = Date.now() - new Date(birthday).getTime();
+            var ageDate = new Date(ageDifMs); // miliseconds from epoch
+            let age = Math.abs(ageDate.getUTCFullYear() - 1970);
 
-    if (age < 18) {
-        return {
-            birthday: "O utilizador não é maior de idade."
+            if (age < 18) {
+                return {
+                    birthday: "O utilizador não é maior de idade."
+                }
+            } else if (age > 120) {
+                return {
+                    birthday: "Por favor introduza uma data de nascimento correta."
+                }
+            }
+        } else {
+            return {
+                birthday: "Por favor introduza uma data de nascimento correta."
+            }
         }
-    } else if (age > 120) {
+    } else{
         return {
             birthday: "Por favor introduza uma data de nascimento correta."
         }
