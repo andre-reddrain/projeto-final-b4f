@@ -1,7 +1,7 @@
-const { getCollection } = require('./backend/db')
+const { getCollection, getMongoCollection, DATABASE_NAME } = require('./backend/db')
 
 async function populateContent() {
-    const collection = await getCollection("content")
+    const collection = await getMongoCollection(DATABASE_NAME,"content")
     await collection.insertMany([
         {
             "type": 0,

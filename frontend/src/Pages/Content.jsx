@@ -20,7 +20,6 @@ export default function Content() {
         fetchContent().then(content => {
             setContent(content)
         })
-        //if (user) return navigate("/login")
     }, [])
 
     async function fetchLogin() {

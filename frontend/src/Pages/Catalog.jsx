@@ -76,15 +76,14 @@ export default function Catalog() {
                                 <div>
                                     <h2>Serie</h2>
                                     <a href={`/catalog/content/${String(content._id)}`}>Nome: {content.name}</a>
-                                    <p>Tempo: {secondsToHours(content.seconds)}</p>
                                 </div>
                                 :
                                 <div>
                                     <h2>Filme</h2>
                                     <a href={`/catalog/content/${String(content._id)}`}>Titulo: {content.title}</a>
-                                    <p>Tempo: {secondsToHours(content.seconds)}</p>
                                 </div>
                         }
+                        <p>Tempo: {secondsToHours(content.seconds)}</p>
                         {
                             content.image ?
                                 <img src={content.image[0]} alt="imagem" width="400" height="600" /> :
