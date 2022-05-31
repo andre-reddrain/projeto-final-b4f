@@ -1,8 +1,51 @@
-body {
-  background-color: black;
+
+
+p {
+    font-size: 15px;
+    color: white;
+    font-family: 'Open Sans', sans-serif;
 }
- 
- 
+body {
+    background-color: black;
+  }
+
+.button1 {
+    color: white;
+    background-color: #A0001D;
+    font-family: 'Inconsolata', monospace;
+
+    
+    font-size: 25px;
+   
+width: 200px;
+height: 70px;
+    border-radius: 70px;
+    border-bottom: 0px;
+    border:none!important;
+}
+
+.button2 {
+    color: white;
+    background-color: #A0001D;
+    font-family: 'Inconsolata', monospace;
+    font-size: 15px;
+   
+width:100px;
+height: 30px;
+    border-radius: 70px;
+    border-bottom: 0px;
+    border:none!important;
+}
+
+.checked {
+    color: #A0001D;
+}
+.notChecked {
+    color: white;
+}
+.visto {
+    width: 200px;
+}
  .caixa1 {
      width: 350px;
      height:35px;
