@@ -1,41 +1,108 @@
+/** ------- CATALINDA ------ **/
 
-
+body {
+    background-color: black;
+  }
 p {
     font-size: 15px;
     color: white;
     font-family: 'Open Sans', sans-serif;
 }
-body {
-    background-color: black;
+
+/** ------- Edit Info + icon Lapis HYPERLINK ------ **/
+.lapis {
+    color: white;
+    align-items: center;
+      margin: 10px;
+   width: 40px;
+
+   
+}
+.editInfo {
+
+ font-family: 'Open Sans', sans-serif;
+    font-size: 15px;
+    color: white;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+
+}
+/** ------- Forgot Password HYPERLINK------ **/
+.password {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 15px;
+    color: white;
+    text-decoration: none;
+  
+}
+
+/** ------- Watch Review HYPERLINK ------ **/
+.review {
+    font-family: 'Roboto Mono', monospace;
+    color: white;
+    font-size: 22px;
+
+}
+
+/** ------- HOVER... Para todas as hiperligaçoes ------ **/
+a:hover {
+    color: rgb(217, 212, 212);
   }
 
-.button1 {
+  
+/** ------- TODOS OS H1 (TITULOS PAGINAS) ------ **/
+h1 {
+    font-size: 70px;
     color: white;
-    background-color: #A0001D;
-    font-family: 'Inconsolata', monospace;
-
-    
-    font-size: 25px;
-   
-width: 200px;
-height: 70px;
-    border-radius: 70px;
-    border-bottom: 0px;
-    border:none!important;
+    font-family: 'Roboto Mono', monospace;
 }
 
-.button2 {
-    color: white;
-    background-color: #A0001D;
-    font-family: 'Inconsolata', monospace;
+/** ------- Icon Account + Nome Pessoa ------ **/
+.divAccount { 
     font-size: 15px;
-   
-width:100px;
-height: 30px;
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+    display: flex;
+    align-items: center;
+}
+.iconAccount {
+    margin: 10px;
+    width: 40px;
+}
+
+/** ------- BOTOES ------ **/
+
+  .buttonList {
+      width: 100px;
+  }
+
+.buttonBig {
+    color: white;
+    background-color: #A0001D;
+    font-family: 'Roboto Mono', monospace;
+    margin: 10px;
+    font-size: 30px;
+    width: 200px;height: 70px;
     border-radius: 70px;
     border-bottom: 0px;
     border:none!important;
 }
+
+.buttonSmall {
+    color: white;
+    background-color: #A0001D;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 15px;
+    margin: 10px;
+    width:100px;
+    height: 30px;
+    border-radius: 70px;
+    border-bottom: 0px;
+    border:none!important;
+    
+}
+/** ------- ICONES ------ **/
 
 .checked {
     color: #A0001D;
@@ -43,35 +110,51 @@ height: 30px;
 .notChecked {
     color: white;
 }
-.visto {
+.iconVisto {
     width: 200px;
-}
- .caixa1 {
-     width: 350px;
-     height:35px;
-     box-shadow:none;
-}
-.name1{
-    width: 200px;
-    height: 35px;
-}
-.text1{
-    color:white;
-}
-.caixaemail{
-    width: 410px;
-    height: 35px;
-}
-.password{
-    width: 200px;
-    height: 35px;
-}
-.rectangle {
-        height: 150px;
-        width: 240px;
-        background-color:black;
 }
 
+/**-----CAIXA TEXTO REVIEW-----**/
+
+.reviewBox {
+    width: 50%;
+    height: 150px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    resize: none;
+    margin-left: 25%;
+}
+
+/** ------ GUI ------ **/
+.caixa1 {
+    width: 350px;
+    height:35px;
+    box-shadow:none;
+}
+.name1{
+   width: 200px;
+   height: 35px;
+}
+.text1{
+   color:white;
+}
+.caixaemail{
+   width: 410px;
+   height: 35px;
+}
+.password{
+   width: 200px;
+   height: 35px;
+}
+
+.rectangle {
+    height: 150px;
+    width: 240px;
+    background-color:black;
+}
 .searchbar {
         box-sizing: border-box;
       }
