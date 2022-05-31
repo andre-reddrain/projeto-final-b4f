@@ -1,8 +1,12 @@
-const { MongoClient, ObjectId } = require('mongodb')
+const { MongoClient } = require('mongodb')
 const URL = process.env.MONGO_URL ?? "mongodb://localhost:27017"
+
 const DATABASE_NAME = "projetofinal"
 const COLLECTION_USER = "user"
 const COLLECTION_SESSION = "session"
+const COLLECTION_CONTENT = "content"
+const COLLECTION_PROGRESS = "progress"
+const COLLECTION_LIST = "list"
 
 /**
  * Connection to the MongoDB Database
@@ -27,9 +31,18 @@ async function getMongoCollection(dbName, collectionName) {
     return client.db(dbName).collection(collectionName)
 }
 
+async function getCollection(collectionName) {
+    const client = await connectToMongo()
+    return client.db("projetofinal").collection(collectionName)
+}
+
 module.exports = {
     DATABASE_NAME,
     COLLECTION_USER,
     COLLECTION_SESSION,
-    getMongoCollection
+    COLLECTION_CONTENT,
+    COLLECTION_PROGRESS,
+    COLLECTION_LIST,
+    getMongoCollection,    
+    getCollection
 }

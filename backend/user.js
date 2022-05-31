@@ -2,10 +2,9 @@ const { ObjectId } = require('mongodb')
 const { DATABASE_NAME, COLLECTION_USER, getMongoCollection } = require("./db")
 
 async function findUserId(id) {
-    console.log(id)
-    console.log("1")
+    //console.log(id)
     if (ObjectId.isValid(id)) {
-        console.log("2")
+        //console.log("2")
         const collection = await getMongoCollection(DATABASE_NAME, COLLECTION_USER)
         return await collection.findOne({ _id: new ObjectId(id) })
     }

@@ -36,9 +36,9 @@ export default function Login() {
             })
         })
         const json = await res.json()
-        if (res.status != 400) {
+        if (res.status !== 400) {
             localStorage.setItem('token', json.token)
-            navigate("/list")
+            navigate("/catalog")
         }
     }
 

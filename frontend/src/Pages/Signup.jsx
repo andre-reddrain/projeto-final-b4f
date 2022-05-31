@@ -47,7 +47,7 @@ export default function Signup() {
             })
         })
         const json = await res.json()
-        if (res.status == 200) {
+        if (res.status === 200) {
             localStorage.setItem('token', json.token)
             navigate("/list") // vai mas o token tá fudido
         }

@@ -16,6 +16,16 @@ const {
     createSession,
     findToken
 } = require("./session")
+const {
+    findAllContent,
+    findContentById
+} = require("./content")
+const {
+    findList
+} = require("./list")
+const {
+    findProgressById
+} = require("./progress")
 const aplication = express.Router()
 const api = express.Router()
 
@@ -45,10 +55,16 @@ aplication.post(`/signup`, async (req, res) => {
     if (Object.keys(errors).length > 0) {
         return res.status(400).json({ message: "Os dados introduzidos não são válidos.", errors })
     }
-    const result = {...signupData, birthday: new Date(birthday)}
-    const id = await createUser(result).insertedId
-    if(id){
-        createSession(id).then(token => {
+    const result = {
+        ...signupData, 
+        birthday: new Date(birthday),
+        creationDate: new Date(),
+        lastLogin: new Date()
+    }
+    const user = await createUser(result)
+    //console.log("USEEEEEEEEEEEER: " + Object.getOwnPropertyNames(user))
+    if(user){
+        createSession(user.insertedId).then(token => {
             res.status(200).json({token: token.insertedId})             
         })
     }
@@ -75,25 +91,67 @@ aplication.post(`/login`, async (req, res) => {
     }
 })
 
-aplication.get("/list", authenticate, async (req, res) => {
+aplication.get("/get-user", authenticateNULL, (req, res) => {
     const user = req.user
     res.status(200).json(user)
 })
 
-aplication.get("/catalog", authenticate, (req, res) => {
-    const user = req.user
-    res.status(200).json(user)
+aplication.get("/list", authenticate, async (req, res) => {
+    const list = await findList()
+    res.status(200).json(list)
 })
+
+aplication.get("/list/progress/:id", authenticate, async (req, res) => {
+    const id = req.params.id
+    const progress = await findProgressById(id)
+    res.status(200).json(progress)
+})
+
+aplication.get("/catalog", authenticateNULL, async (req, res) => {
+    const catalog = await findAllContent()
+    res.status(200).json(catalog)
+})
+
+aplication.get("/catalog/content/:id", authenticateNULL, async (req, res) => {
+    const id = req.params.id
+    const content = await findContentById(id)
+    res.status(200).json(content)
+})
+
+aplication.post("/catalog/content/:id", authenticateNULL, async (req, res) => {
+    const id = req.params.id
+    //console.log(req.body)
+    const { userId, contentId } = req.body
+    //console.log("User: " + userId)
+    //console.log("Content: " + contentId)
+    //const content = await findContentById(id)
+    res.sendStatus(200)
+})
+
+async function authenticateNULL(req, res, next) {
+    const gotToken = req.headers.authenticate//é o token que vem do frontend
+    //console.log("CATALOG TOKEN: " + typeof gotToken)
+    if (gotToken !== "null" && gotToken !== undefined) {
+        const result = await findToken(gotToken) //verifica se o token existe na sessao
+        //console.log("RESULT: " + result.userId)
+        if (!result) return res.sendStatus(404) //se nao exister, xau
+        const user = await findUserId(result.userId) //se existir, obtermos o utilizador 
+        //console.log(user)
+        req.user = user //e guardamos no pedido
+        // salta para o proxim0o
+    }
+    next()
+}
 
 async function authenticate(req, res, next) {
     const gotToken = req.headers.authenticate //é o token que vem do frontend
-    console.log("TOKEN: " + gotToken)
+    //console.log("TOKENNNNNN: " + gotToken)
     if (!gotToken) return res.sendStatus(404)
     const result = await findToken(gotToken) //verifica se o token existe na sessao
-    console.log("RESULT: " + result.userId)
+    //console.log("RESULT: " + result.userId)
     if (!result) return res.sendStatus(404) //se nao exister, xau
     const user = await findUserId(result.userId) //se existir, obtermos o utilizador 
-    console.log(user)
+    //console.log(user)
     req.user = user //e guardamos no pedido
     next() // salta para o proxim0o
 }
