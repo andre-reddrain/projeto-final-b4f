@@ -15,9 +15,16 @@ p {
     align-items: center;
       margin: 10px;
    width: 40px;
-
-   
 }
+   .info {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 15px;
+    color: white;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+   }
+
 .editInfo {
 
  font-family: 'Open Sans', sans-serif;
@@ -71,6 +78,15 @@ h1 {
     width: 40px;
 }
 
+.caixaAccount { 
+    width: 100px;
+    
+    border-color: #ffffff;
+    border-width: 1px;
+    border-style: solid;
+    text-align: center;
+}
+
 /** ------- BOTOES ------ **/
 
   .buttonList {
@@ -115,17 +131,30 @@ h1 {
 }
 
 /**-----CAIXA TEXTO REVIEW-----**/
-
+.divReviewBox {
+   
+  
+}
+.pReviewBox {
+    margin: 0px;
+}
 .reviewBox {
+    font-size: 15px;
+    color: rgb(0, 0, 0);
+    font-family: 'Open Sans', sans-serif;
     width: 50%;
     height: 150px;
-    padding: 12px 20px;
+   
     box-sizing: border-box;
     border: 2px solid #ccc;
     border-radius: 4px;
-    background-color: #f8f8f8;
+    background-color: #ffffff;
     resize: none;
-    margin-left: 25%;
+    
+
+    box-shadow: 0 0 0 0;
+    border: 0 none;
+    outline: 0;
 }
 
 /** ------ GUI ------ **/
