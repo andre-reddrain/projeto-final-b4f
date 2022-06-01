@@ -64,7 +64,7 @@ export default function Login() {
     return (
         <div>
             <div>
-                <form className='formLogin' onSubmit={handleSubmit}>
+                <form className='formPassword' onSubmit={handleSubmit}>
                     {errors.length > 0
                         && <span style={{ color: "red" }}>{errors}</span>}
                     <div>
