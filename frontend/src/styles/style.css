@@ -5,6 +5,18 @@
   --largura-meio-input: 200px;
 }
 
+.logo {
+    width:400px;
+   margin: 20px;
+    align-items: center;
+    
+  
+}
+label {
+    font-size: 15px;
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+}
 body {
     background-color: black;
   }
@@ -12,6 +24,21 @@ p {
     font-size: 15px;
     color: white;
     font-family: 'Open Sans', sans-serif;
+
+}
+
+
+
+.caixaTexto {
+    width: 350px;
+    height:35px;
+    box-shadow:none;
+     font-family: 'Open Sans', sans-serif;
+      font-size: 15px;  
+      margin-bottom: 20px; 
+      margin-left: 20px;
+      margin-right:20px ;
+      
 }
 
 /** ------- Edit Info + icon Lapis HYPERLINK ------ **/
@@ -84,6 +111,17 @@ h1 {
       width: 100px;
   }
 
+  .buttonBig2 {
+    color: white;
+    background-color: #A0001D;
+    font-family: 'Roboto Mono', monospace;
+    margin: 10px;
+    font-size: 20px;
+    width: 200px;height: 70px;
+    border-radius: 70px;
+    border-bottom: 0px;
+    border:none!important;
+}
 .buttonBig {
     color: white;
     background-color: #A0001D;
@@ -160,7 +198,6 @@ h1 {
   box-shadow:none;
   font-family: 'Open Sans', sans-serif;
 font-size: 15px;   
-margin-right: ;
 }
 .firstName{
    width: 200px;
@@ -209,16 +246,8 @@ margin-right: ;
         cursor: pointer;
         border-radius: 25px;
       }
-      h1{
-        color:white;
-        font-family: 'Open Sans', sans-serif;
-        font-size: 15px;
-      }
-      p{
-        color:white;
-        font-family: 'Open Sans', sans-serif;
-        font-size: 15px;
-      }
+     
+     
 
       .divfilme{
         color:white;
@@ -306,23 +335,46 @@ margin-right: ;
       border:solid;
       border:none;
     }
-
     .labelAndInput{
-      display: flex;
-      flex-direction: column;
-      text-align: left;
-    }
-
-    
-    .formLogin{
-      display: flex;
-      flex-direction: column;
-      align-items: left;
-      align-self: center;
-
-    }
-
-    .caixapassword, .caixaemail {
-      width: 420px;
-    }
-    
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+      }
+  
+  
+      .formUsername{
+        display: flex;
+        flex-direction: column;
+        align-items: left;
+        align-self: center;
+        margin-left: -290px;
+  
+      }
+      .formEmail{
+        display: flex;
+        flex-direction: column;
+        align-items: left;
+        align-self: center;
+        margin-left: -320px;
+      }
+      .formBirthday{
+        display: flex;
+        flex-direction: column;
+        align-items: left;
+        align-self: center;
+        margin-left: -300px;
+      }
+      .formPassword{
+        display: flex;
+        flex-direction: column;
+        align-items: left;
+        align-self: center;
+        margin-left: -290px;
+      }
+      .formConfirmPassword{
+        display: flex;
+        flex-direction: column;
+        align-items: left;
+        align-self: center;
+        margin-left: -230px;
+      }

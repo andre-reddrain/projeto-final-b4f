@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react"
 import { useNavigate } from "react-router-dom"
+import '../styles/style.css'
+import Logo from '../styles/Images/LogobRed.svg'
 
 export default function Signup() {
     const [username, setUsername] = useState("")
@@ -51,10 +53,8 @@ export default function Signup() {
             localStorage.setItem('token', json.token)
             navigate("/list") // vai mas o token tá fudido
         }
-    }
 
-    return (
-        <div>
+        /* <div>
             <form onSubmit={handleSubmit}>
                 {errors.length > 0
                     && <span style={{ color: "red" }}>{errors}</span>
@@ -77,6 +77,39 @@ export default function Signup() {
 
                 <input type="submit" />
             </form>
+        </div>*/
+    }
+
+    return (
+
+
+        <div>
+            <div> <img src={Logo} alt="" className="logo" /></div>
+            <div className="divSignUp">
+                <h1>Welcome to The WATCHER</h1>
+
+                <form onSubmit={handleSubmit}>
+                    {errors.length > 0
+                        && <span style={{ color: "red" }}>{errors}</span>
+                    }
+                    <label className="formUsername">Username</label>
+                    <input type="text" className="caixaTexto" value={username} onChange={(e) => handleUserInput(e, "username")} /> <br />
+
+                    <label className="formEmail">Email</label>
+                    <input type="text" className="caixaTexto" value={email} onChange={(e) => handleUserInput(e, "email")} /> <br />
+
+                    <label className="formBirthday">Birthday</label>
+                    <input type="text" className="caixaTexto" value={birthday} onChange={(e) => handleUserInput(e, "birthday")} /> <br />
+
+                    <label className="formPassword">Password</label>
+                    <input type="password" className="caixaTexto" value={password} onChange={(e) => handleUserInput(e, "password")} /> <br />
+
+                    <label className="formConfirmPassword">Confirm Password</label>
+                    <input type="password" className="caixaTexto" value={confirmPassword} onChange={(e) => handleUserInput(e, "confirmPassword")} />
+                    <br />
+                    <input type="submit" value="Create Account" className="buttonBig2" />
+                </form>
+            </div>
         </div>
     )
 }
