@@ -1,14 +1,13 @@
 import { useEffect, useState } from "react"
 import { useNavigate } from "react-router-dom"
 
-export default function Catalog() {
+export default function List() {
     const token = localStorage.getItem("token")
     const [user, setUser] = useState({})
-    const [list, setList] = useState([])
+    const [list, setList] = useState(null)
     const navigate = useNavigate()
 
     useEffect(() => {
-
         fetchLogin().then((result) => {
             setUser(result)
         })
@@ -19,7 +18,7 @@ export default function Catalog() {
     }, [])
 
     async function fetchLogin() {
-        const res = await fetch("/get-user", {
+        const res = await fetch("/api/get-user", {
             method: "GET",
             headers: {
                 "Authenticate": localStorage.getItem("token")
@@ -33,7 +32,7 @@ export default function Catalog() {
     }
 
     async function fetchList() {
-        const res = await fetch("/list", {
+        const res = await fetch("/api/list", {
             method: "GET",
             headers: {
                 "Authenticate": localStorage.getItem("token")
@@ -46,26 +45,43 @@ export default function Catalog() {
         return json
     }
 
+    /*
+    {
+                list !== null ?
+                    //console.log(list.progresses)
+                    //console.log(list.progresses[0][0])
+
+                    list.progresses.map((content) => (
+                        <div
+                            key={content.progressID}
+                        >
+                            <p>{content.progressID}</p>
+                        </div>
+                    ))
+
+                    :
+                    <h2>Lista Vazia</h2>
+            }
+    */
+
     return (
         <div>
             <h1>LISTTTTTTTTAAAAAAAAAAAA</h1>
             <p>{token}</p>
             <p>{user.username}</p>
             {
-                list.map((content) => (
-                    <div
-                        key={content._id}
-                    >
-                        {
-                            content.type === 0 ?
-                                <p>Nome: {content.name}</p> :
-                                <p>Titulo: {content.title}</p>
-                        }
-                        <p>Data de lançamento: {content.releaseDate}</p>
-                        <p>Tempo: {content.seconds}</p>
-                    </div>
-                ))
+                list !== null ?
+
+                    list.map((progress) => (
+                        < div
+                            key={progress.content._id}
+                        >
+                            <p>{progress.content.name}</p>
+                        </div>
+                    ))
+                    :
+                    <h2>E</h2>
             }
-        </div>
+        </div >
     )
 }

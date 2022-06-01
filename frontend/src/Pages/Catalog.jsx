@@ -24,7 +24,7 @@ export default function Catalog() {
     }, [])
 
     async function fetchLogin() {
-        const res = await fetch("/get-user", {
+        const res = await fetch("/api/get-user", {
             method: "GET",
             headers: {
                 "Authenticate": localStorage.getItem("token")
@@ -38,7 +38,7 @@ export default function Catalog() {
     }
 
     async function fetchCatalog() {
-        const res = await fetch("/catalog", {
+        const res = await fetch("/api/catalog", {
             method: "GET",
             headers: {
                 "Authenticate": localStorage.getItem("token")

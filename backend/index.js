@@ -3,8 +3,8 @@ const app = express()
 const port = process.env.PORT ?? 3090
 const {aplication, api} = require("./routes")
 
-app.use("/", aplication)
-app.use("/api", api)
+app.use("/api", aplication)
+app.use("/api-test", api)
 
 
 app.listen(port, () => {
