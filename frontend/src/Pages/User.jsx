@@ -85,7 +85,7 @@ export default function Content() {
                 <button
                     onClick={() => setEdit(true)}
                 >Editar</button>
-                <h2> Time whactend: {secondsToHours(time)}</h2>
+                <p> Time whatched: {secondsToHours(time)}</p>
             </div>
         )
     }
