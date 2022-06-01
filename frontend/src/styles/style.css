@@ -1,5 +1,22 @@
 /** ------- CATALINDA ------ **/
 
+:root {
+  --largura-input: 410px;
+  --largura-meio-input: 200px;
+}
+
+.logo {
+    width:400px;
+   margin: 20px;
+    align-items: center;
+    
+  
+}
+label {
+    font-size: 15px;
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+}
 body {
     background-color: black;
   }
@@ -7,6 +24,21 @@ p {
     font-size: 15px;
     color: white;
     font-family: 'Open Sans', sans-serif;
+
+}
+
+
+
+.caixaTexto {
+    width: 350px;
+    height:35px;
+    box-shadow:none;
+     font-family: 'Open Sans', sans-serif;
+      font-size: 15px;  
+      margin-bottom: 20px; 
+      margin-left: 20px;
+      margin-right:20px ;
+      
 }
 
 /** ------- Edit Info + icon Lapis HYPERLINK ------ **/
@@ -41,7 +73,9 @@ p {
 .review {
     font-family: 'Roboto Mono', monospace;
     color: white;
-    font-size: 22px;
+    font-size: 15pxpx;
+    text-decoration: underline;
+    margin-left:275px;
 
 }
 
@@ -77,6 +111,17 @@ h1 {
       width: 100px;
   }
 
+  .buttonBig2 {
+    color: white;
+    background-color: #A0001D;
+    font-family: 'Roboto Mono', monospace;
+    margin: 10px;
+    font-size: 20px;
+    width: 200px;height: 70px;
+    border-radius: 70px;
+    border-bottom: 0px;
+    border:none!important;
+}
 .buttonBig {
     color: white;
     background-color: #A0001D;
@@ -87,6 +132,17 @@ h1 {
     border-radius: 70px;
     border-bottom: 0px;
     border:none!important;
+}
+.buttonBig2 {
+  color: white;
+  background-color: #A0001D;
+  font-family: 'Roboto Mono', monospace;
+  margin: 10px;
+  font-size: 20px;
+  width: 200px;height: 70px;
+  border-radius: 70px;
+  border-bottom: 0px;
+  border:none!important;
 }
 
 .buttonSmall {
@@ -129,37 +185,49 @@ h1 {
 }
 
 /** ------ GUI ------ **/
-.caixa1 {
+.caixaemail {
     width: 350px;
     height:35px;
     box-shadow:none;
-     font-family: 'Open Sans', sans-serif;
-      font-size: 15px;   
-}
-.name1{
-   width: 200px;
-   height: 35px;
-}
-.text1{
-   color:white;
-}
-.caixaemail{
-   width: 410px;
-   height: 35px;
-}
-.password{
-    width: 200px;
-    height: 35px;
     font-family: 'Open Sans', sans-serif;
     font-size: 15px;
 }
-
-.rectangle {
-        height: 150px;
-        width: 240px;
-        background-color:white;
-        margin: 10px;
+.caixapassword {
+  width: 350px;
+  height:35px;
+  box-shadow:none;
+  font-family: 'Open Sans', sans-serif;
+font-size: 15px;   
 }
+.firstName{
+   width: 200px;
+   height: 35px;
+}
+.lastName{
+  width: 200px;
+  height: 35px;
+}
+.textEmail{
+   color:white;
+   margin-left: -370px;
+}
+.textPassword{
+  color:white;
+  margin-left: -350px;
+}
+.caixaemail{
+  /*width: var(--largura-input)*/
+   height: 35px;
+   margin-left: 5px;
+}
+.caixapassword{
+    width: 410px;
+    height: 35px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 15px;
+    background-color: white;
+}
+
 .searchbar {
         box-sizing: border-box;
       }
@@ -178,16 +246,8 @@ h1 {
         cursor: pointer;
         border-radius: 25px;
       }
-      h1{
-        color:white;
-        font-family: 'Open Sans', sans-serif;
-        font-size: 15px;
-      }
-      p{
-        color:white;
-        font-family: 'Open Sans', sans-serif;
-        font-size: 15px;
-      }
+     
+     
 
       .divfilme{
         color:white;
@@ -205,19 +265,19 @@ h1 {
       .checked {
         color: #A0001D;
     }
-    .capslockLetter{
+    .watchingTime{
       font-family: 'Roboto Mono', monospace;
       color:#A0001D;
       font-size: 50px;
       text-align: center;
     }
-    .capslockletterWhite{
+    .Days11{
       font-family: 'Roboto Mono', monospace;
       color:white;
       font-size: 50px;
       text-align: center;
     }
-    .divseries{
+    .boxSeries{
       color:white;
       width: 240px;
       height: 150px;
@@ -234,7 +294,7 @@ h1 {
       align-items: center;
       align-self: center;
     }
-    .divseriesgrande{
+    .boxSeriesGrande{
       color:white;
       width: 200px;
       height: 350px;
@@ -243,13 +303,13 @@ h1 {
       vertical-align: baseline;
       border:solid;
     }
-    .caixaprogressov{
+    .barraProgressoV{
       background-color:#A0001D;
       border-radius: 15px;
       width: 200px;
       border:none;
     }
-    .caixaprogressoc{
+    .barraProgressoC{
       background-color:#444444;
       border-radius: 15px;
       width: 200px;
@@ -258,7 +318,7 @@ h1 {
     .iconAdding{
       text-align: end;
     }
-    .divnewmovie{
+    .boxNewMovie{
       color:white;
       width: 240px;
       height: 150px;
@@ -268,10 +328,53 @@ h1 {
       border:solid;
       padding: 5px;
     }
-    .newmovie{
+    .newMovie{
       background-color:#A0001D;
       width: 70px;
       height: 50px;
       border:solid;
       border:none;
     }
+    .labelAndInput{
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+      }
+  
+  
+      .formUsername{
+        display: flex;
+        flex-direction: column;
+        align-items: left;
+        align-self: center;
+        margin-left: -290px;
+  
+      }
+      .formEmail{
+        display: flex;
+        flex-direction: column;
+        align-items: left;
+        align-self: center;
+        margin-left: -320px;
+      }
+      .formBirthday{
+        display: flex;
+        flex-direction: column;
+        align-items: left;
+        align-self: center;
+        margin-left: -300px;
+      }
+      .formPassword{
+        display: flex;
+        flex-direction: column;
+        align-items: left;
+        align-self: center;
+        margin-left: -290px;
+      }
+      .formConfirmPassword{
+        display: flex;
+        flex-direction: column;
+        align-items: left;
+        align-self: center;
+        margin-left: -230px;
+      }

@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react"
 import { useNavigate } from "react-router-dom"
+import '../styles/style.css';
 
 export default function Login() {
     const [email, setEmail] = useState("")
@@ -42,8 +43,8 @@ export default function Login() {
         }
     }
 
-    return (
-        <div>
+    /*
+<div>
             <form onSubmit={handleSubmit}>
                 {errors.length > 0
                     && <span style={{ color: "red" }}>{errors}</span>}
@@ -57,6 +58,43 @@ export default function Login() {
                 >Mostrar</button>
                 <input type="submit"></input>
             </form>
+        </div>
+    */
+
+    return (
+        <div>
+            <div>
+                <form className='formLogin' onSubmit={handleSubmit}>
+                    {errors.length > 0
+                        && <span style={{ color: "red" }}>{errors}</span>}
+                    <div>
+                        <p>LOGO</p>
+                    </div>
+
+                    <div className='formLogin'>
+                        <label className="textEmail">E-mail</label> 
+                <input type="text" className="caixaemail" value={email} onChange={(e) => handleUserInput(e, "email")} /> <br /><br></br>
+                    </div>
+
+
+                    <div className='formLogin'>
+                        <label className="textPassword">Password</label>
+                        <div>
+                        <input type={toggle ? "text" : "password"} className="caixapassword" value={password} onChange={(e) => handleUserInput(e, "password")}>
+                        </input>
+                        </div>
+                    </div>
+                    <div className="review">
+                        Forget password
+                    </div><br></br>
+                        <div className='formLogin'>
+                    <input type="submit" className="buttonBig" value="Login"></input>
+                    </div>
+                    <div className='formLogin'>
+                    <input type="submit" className="buttonBig2" value="Create account"></input>
+                    </div>
+                </form>
+            </div>
         </div>
     )
 }
