@@ -258,7 +258,7 @@ h1 {
     .iconAdding{
       text-align: end;
     }
-    .divnewmovie{
+    .boxnewmovie{
       color:white;
       width: 240px;
       height: 150px;
@@ -272,6 +272,23 @@ h1 {
       background-color:#A0001D;
       width: 70px;
       height: 50px;
+      margin-left:80px;
+      margin-bottom: -50px;
       border:solid;
       border:none;
+      border-top:none;
+      text-align:center;
+    }
+    .boxnewmovie2:hover{
+     color:white;
+     width: 280px;
+     height: 200px;
+     border:solid;
+     -webkit-transform: scale(1.1);
+     -moz-transform: scale(1.1);
+     -o-transform: scale(1.1);
+     -ms-transform: scale(1.1);
+     transform: scale(1.1);
+     margin-left: 12px;
+      
     }
