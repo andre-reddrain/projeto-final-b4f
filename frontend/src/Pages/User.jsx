@@ -1,21 +1,40 @@
 import { useEffect, useState } from "react"
 import { useNavigate } from "react-router-dom"
+import { secondsToMinutes, secondsToHours } from "../components/validate"
 
 export default function Content() {
     const token = localStorage.getItem("token")
     const [user, setUser] = useState({})
     const [edit, setEdit] = useState(false)
+    const [time, setTimer] = useState(0)
     const navigate = useNavigate()
 
     useEffect(() => {
         fetchLogin().then((result) => {
             setUser(result)
         })
+        fetchTime().then((result) => {
+            setTimer(result)
+        })
         //if (user) return navigate("/login")
     }, [])
 
     async function fetchLogin() {
-        const res = await fetch("/get-user", {
+        const res = await fetch("/api/get-user", {
+            method: "GET",
+            headers: {
+                "Authenticate": localStorage.getItem("token")
+            }
+        })
+        const json = await res.json()
+        if (res.status === 404) {
+            return navigate("/login")
+        }
+        return json
+    }
+
+    async function fetchTime() {
+        const res = await fetch("/api/time", {
             method: "GET",
             headers: {
                 "Authenticate": localStorage.getItem("token")
@@ -66,6 +85,7 @@ export default function Content() {
                 <button
                     onClick={() => setEdit(true)}
                 >Editar</button>
+                <h2> Time whactend: {secondsToHours(time)}</h2>
             </div>
         )
     }

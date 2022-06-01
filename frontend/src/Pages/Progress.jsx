@@ -19,7 +19,7 @@ export default function Progress() {
     }, [])
 
     async function fetchLogin() {
-        const res = await fetch("/get-user", {
+        const res = await fetch("/api/get-user", {
             method: "GET",
             headers: {
                 "Authenticate": localStorage.getItem("token")
@@ -34,7 +34,7 @@ export default function Progress() {
 
     async function fetchProgress() {
         const { id } = param;
-        const res = await fetch(`/list/progress/${id}`, {
+        const res = await fetch(`/api/list/progress/${id}`, {
             method: "GET",
             headers: {
                 "Authenticate": localStorage.getItem("token")

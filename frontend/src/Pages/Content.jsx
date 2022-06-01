@@ -23,7 +23,7 @@ export default function Content() {
     }, [])
 
     async function fetchLogin() {
-        const res = await fetch("/get-user", {
+        const res = await fetch("/api/get-user", {
             method: "GET",
             headers: {
                 "Authenticate": localStorage.getItem("token")
@@ -38,7 +38,7 @@ export default function Content() {
 
     async function fetchContent() {
         const { id } = param;
-        const res = await fetch(`/catalog/content/${id}`, {
+        const res = await fetch(`/api/catalog/content/${id}`, {
             method: "GET"
         })
         const json = await res.json()
@@ -50,7 +50,7 @@ export default function Content() {
 
     async function add() {
         const { id } = param;
-        const res = await fetch(`/catalog/content/${id}`, {
+        const res = await fetch(`/api/catalog/content/${id}`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
