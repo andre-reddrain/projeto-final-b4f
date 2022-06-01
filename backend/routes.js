@@ -21,10 +21,13 @@ const {
     findContentById
 } = require("./content")
 const {
-    findList
+    findListByUserId,
+    createList,
+    updateListByUserId
 } = require("./list")
 const {
-    findProgressById
+    findProgressById,
+    createProgress
 } = require("./progress")
 const aplication = express.Router()
 const api = express.Router()
@@ -122,9 +125,31 @@ aplication.post("/catalog/content/:id", authenticateNULL, async (req, res) => {
     const id = req.params.id
     //console.log(req.body)
     const { userId, contentId } = req.body
-    //console.log("User: " + userId)
-    //console.log("Content: " + contentId)
-    //const content = await findContentById(id)
+
+    const progressInsert = {
+        userId: userId,
+        contentId: contentId,
+        creationDate: new Date(),
+        lastLogin: new Date()
+    }
+    const progress = await createProgress(progressInsert)
+    const list = await findListByUserId(userId)
+    if(list){
+        updateListByUserId(userId, {
+            progresses: "..."
+        }).then(list => {
+            res.status(200).json(list)         
+        })
+    } else{
+        const listInsert = {
+            progresses: [
+                {progressID: progress.insertedId}
+            ]
+        }
+        createList(listInsert).then(list => {
+            res.status(200).json(list)         
+        })
+    }
     res.sendStatus(200)
 })
 
