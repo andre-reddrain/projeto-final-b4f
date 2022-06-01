@@ -25,7 +25,7 @@ export default function Login() {
     }, [])
 
     async function login(email, password) {
-        const res = await fetch("/login", {
+        const res = await fetch("/api/login", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"

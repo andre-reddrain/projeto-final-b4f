@@ -1,3 +1,4 @@
+const { ObjectId } = require('mongodb')
 const express = require("express")
 const {
     testEmail,
@@ -27,7 +28,10 @@ const {
 } = require("./list")
 const {
     findProgressById,
-    createProgress
+    updateProgressByUserId,
+    createProgress,
+    findProgressesAgregation,
+    findProgressByContentAndUser
 } = require("./progress")
 const aplication = express.Router()
 const api = express.Router()
@@ -98,9 +102,24 @@ aplication.get("/get-user", authenticateNULL, (req, res) => {
     const user = req.user
     res.status(200).json(user)
 })
+aplication.get("/time", authenticate, async (req, res) => {
+    const user = req.user
+    const list = await findProgressesAgregation(user._id)
+    //console.log(list)
+    let time = 0
+    list.map((progress)=> {
+        time += progress.content.seconds
+    })
+    //console.log(time)
+    res.status(200).json(time)
+})
 
 aplication.get("/list", authenticate, async (req, res) => {
-    const list = await findList()
+    const user = req.user
+    //const list = await findListByUserId(String(user._id))
+    //console.log(user._id)
+    const list = await findProgressesAgregation(user._id)
+    //console.log(list)
     res.status(200).json(list)
 })
 
@@ -127,30 +146,25 @@ aplication.post("/catalog/content/:id", authenticateNULL, async (req, res) => {
     const { userId, contentId } = req.body
 
     const progressInsert = {
-        userId: userId,
-        contentId: contentId,
-        creationDate: new Date(),
-        lastLogin: new Date()
+        userId: new ObjectId(userId),
+        contentId: new ObjectId(contentId),
+        percentage: 0,
+        ranking: 0,
+        state: "unknow",
     }
-    const progress = await createProgress(progressInsert)
-    const list = await findListByUserId(userId)
-    if(list){
-        updateListByUserId(userId, {
-            progresses: "..."
-        }).then(list => {
-            res.status(200).json(list)         
+    const existing = await findProgressByContentAndUser(userId, contentId)
+    if(existing){
+        updateProgressByUserId(userId, {
+            ...existing,
+            percentage: 20
+        }).then(id => {
+            res.status(200).json(id)         
         })
-    } else{
-        const listInsert = {
-            progresses: [
-                {progressID: progress.insertedId}
-            ]
-        }
-        createList(listInsert).then(list => {
-            res.status(200).json(list)         
+    } else {
+        createProgress(progressInsert).then(id => {
+            res.status(200).json(id)         
         })
     }
-    res.sendStatus(200)
 })
 
 async function authenticateNULL(req, res, next) {
