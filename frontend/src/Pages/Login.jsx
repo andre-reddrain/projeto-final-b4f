@@ -63,7 +63,7 @@ export default function Login() {
     */
 
     return (
-        
+
         <div > <div> <img src={Logo} alt="" className="logo" /></div>
             <div>
                 <form className='formPassword' onSubmit={handleSubmit}>
@@ -74,26 +74,26 @@ export default function Login() {
                     </div>
 
                     <div className='formEmail2'>
-                        <label className="textEmail">E-mail</label> 
-                <input type="text" className="caixaemail" value={email} onChange={(e) => handleUserInput(e, "email")} /> <br /><br></br>
+                        <label className="textEmail">E-mail</label>
+                        <input type="text" className="caixaemail" value={email} onChange={(e) => handleUserInput(e, "email")} /> <br /><br></br>
                     </div>
 
 
                     <div className='formPassword'>
                         <label className="textPassword">Password</label>
                         <div>
-                        <input type={toggle ? "text" : "password"} className="caixapassword" value={password} onChange={(e) => handleUserInput(e, "password")}>
-                        </input>
+                            <input type={toggle ? "text" : "password"} className="caixapassword" value={password} onChange={(e) => handleUserInput(e, "password")}>
+                            </input>
                         </div>
                     </div>
                     <div className="review">
                         Forget password
                     </div><br></br>
-                        <div className='formLogin'>
-                    <input type="submit" className="buttonBig" value="Login"></input>
-                    </div>
                     <div className='formLogin'>
-                    <input type="submit" className="buttonBig2" value="Create account"></input>
+                        <input type="submit" className="buttonBig" value="Login"></input>
+                    </div>
+                    <div className='formLogin' onClick={() => navigate(`/signup`)}>
+                        <input className="buttonBig2" value="Create account"></input>
                     </div>
                 </form>
             </div>

@@ -95,11 +95,12 @@ export default function Content() {
 
 }*/
 
+
+
     if (edit) {
         return (
             <div className="divEdit">
                 <h1>My Account</h1>
-                <p>{token}</p>
                 <input
                     className="caixaTexto"
                     type="text"
@@ -128,7 +129,6 @@ export default function Content() {
         return (
             <div>
                 <h1>My Account</h1>
-                <p>{token}</p>
                 <p>{user.username}</p>
                 <p >Birthday: {user.birthday}</p>
                 <p>Email: {user.email}</p>

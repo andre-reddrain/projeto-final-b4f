@@ -143,7 +143,7 @@ export default function Signup() {
                     <label className="formConfirmPassword">Confirm Password</label>
                     <input type="password" className="caixaTexto" value={confirmPassword} onChange={(e) => handleUserInput(e, "confirmPassword")} />
                     <br />
-                    <input type="submit" value="Create Account" className="buttonBig2" />
+                    <input style={{ marginLeft: "30px" }} type="submit" value="Create Account" className="buttonBig2" />
                 </form>
             </div>
         </div>
