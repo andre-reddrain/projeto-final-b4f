@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react"
 import { useNavigate } from "react-router-dom"
 import '../styles/style.css';
+import Logo from '../styles/Images/LogobRed.svg';
 
 export default function Login() {
     const [email, setEmail] = useState("")
@@ -62,22 +63,23 @@ export default function Login() {
     */
 
     return (
-        <div>
+        
+        <div > <div> <img src={Logo} alt="" className="logo" /></div>
             <div>
                 <form className='formPassword' onSubmit={handleSubmit}>
                     {errors.length > 0
                         && <span style={{ color: "red" }}>{errors}</span>}
                     <div>
-                        <p>LOGO</p>
+
                     </div>
 
-                    <div className='formLogin'>
+                    <div className='formEmail2'>
                         <label className="textEmail">E-mail</label> 
                 <input type="text" className="caixaemail" value={email} onChange={(e) => handleUserInput(e, "email")} /> <br /><br></br>
                     </div>
 
 
-                    <div className='formLogin'>
+                    <div className='formPassword'>
                         <label className="textPassword">Password</label>
                         <div>
                         <input type={toggle ? "text" : "password"} className="caixapassword" value={password} onChange={(e) => handleUserInput(e, "password")}>

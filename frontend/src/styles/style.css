@@ -1,5 +1,7 @@
 /** ------- CATALINDA ------ **/
 
+
+
 :root {
   --largura-input: 410px;
   --largura-meio-input: 200px;
@@ -75,7 +77,7 @@ p {
     color: white;
     font-size: 15pxpx;
     text-decoration: underline;
-    margin-left:275px;
+    margin-left: 547px;
 
 }
 
@@ -111,27 +113,18 @@ h1 {
       width: 100px;
   }
 
-  .buttonBig2 {
-    color: white;
-    background-color: #A0001D;
-    font-family: 'Roboto Mono', monospace;
-    margin: 10px;
-    font-size: 20px;
-    width: 200px;height: 70px;
-    border-radius: 70px;
-    border-bottom: 0px;
-    border:none!important;
-}
 .buttonBig {
     color: white;
     background-color: #A0001D;
     font-family: 'Roboto Mono', monospace;
     margin: 10px;
     font-size: 30px;
-    width: 200px;height: 70px;
+    width: 200px;
+    height: 70px;
     border-radius: 70px;
     border-bottom: 0px;
     border:none!important;
+    margin-left:270px;
 }
 .buttonBig2 {
   color: white;
@@ -139,10 +132,12 @@ h1 {
   font-family: 'Roboto Mono', monospace;
   margin: 10px;
   font-size: 20px;
-  width: 200px;height: 70px;
+  width: 200px;
+  height: 70px;
   border-radius: 70px;
   border-bottom: 0px;
   border:none!important;
+  margin-left:270px;
 }
 
 .buttonSmall {
@@ -185,20 +180,7 @@ h1 {
 }
 
 /** ------ GUI ------ **/
-.caixaemail {
-    width: 350px;
-    height:35px;
-    box-shadow:none;
-    font-family: 'Open Sans', sans-serif;
-    font-size: 15px;
-}
-.caixapassword {
-  width: 350px;
-  height:35px;
-  box-shadow:none;
-  font-family: 'Open Sans', sans-serif;
-font-size: 15px;   
-}
+
 .firstName{
    width: 200px;
    height: 35px;
@@ -209,23 +191,30 @@ font-size: 15px;
 }
 .textEmail{
    color:white;
-   margin-left: -370px;
+   margin-left: 201px;
 }
 .textPassword{
   color:white;
-  margin-left: -350px;
+  margin-left: 220px;
 }
 .caixaemail{
   /*width: var(--largura-input)*/
-   height: 35px;
-   margin-left: 5px;
+  width: 410px;
+  height: 40px;
+  margin-left: 575px;
+  font-family: 'Open Sans', sans-serif;
+  box-shadow:none;
+  font-size: 15px;
 }
 .caixapassword{
     width: 410px;
-    height: 35px;
+    height: 40px;
     font-family: 'Open Sans', sans-serif;
     font-size: 15px;
     background-color: white;
+    margin-left: 570px;
+    box-shadow:none;
+  
 }
 
 .searchbar {
@@ -302,6 +291,7 @@ font-size: 15px;
       font-size: 15px;
       vertical-align: baseline;
       border:solid;
+      margin-left: 20px;
     }
     .barraProgressoV{
       background-color:#A0001D;
@@ -342,6 +332,20 @@ font-size: 15px;
       }
   
   
+      .formEmail2{
+        display: flex;
+        flex-direction: column;
+        align-items: left;
+        align-self: center;
+        margin-left: -300px;
+      }
+      .formPassword{
+        display: flex;
+        flex-direction: column;
+        align-items: left;
+        align-self: center;
+        margin-left: -400px;
+      }
       .formUsername{
         display: flex;
         flex-direction: column;
@@ -378,3 +382,12 @@ font-size: 15px;
         align-self: center;
         margin-left: -290px;
       }
+.logoContent{
+  width:400px;
+  margin: 20px;
+  margin-left: -1050px;
+}
+.halo{
+  text-align: left;
+  margin-left: 250px;
+}
