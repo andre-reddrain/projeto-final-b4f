@@ -1,11 +1,13 @@
 import { useEffect, useState } from "react"
 import { useNavigate } from "react-router-dom"
-import { secondsToMinutes, secondsToHours } from "../components/validate"
 import styles from "../styles/style.module.css"
+//import '../styles/style.css'
+import imgAccount from "../styles/icon.svg"
+import Logo from '../styles/Images/LogobRed.svg'
 
 // FontAwesome
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faHeart } from '@fortawesome/free-solid-svg-icons'
+import { faHeart, faSearch } from '@fortawesome/free-solid-svg-icons'
 
 export default function Catalog() {
     const token = (localStorage.getItem("token") !== "null") ?
@@ -13,6 +15,7 @@ export default function Catalog() {
         null
     const [user, setUser] = useState({})
     const [catalog, setCatalog] = useState([])
+    const [filterCatalog, setFilterCatalog] = useState([])
     const navigate = useNavigate()
 
     useEffect(() => {
@@ -24,6 +27,7 @@ export default function Catalog() {
 
         fetchCatalog().then(catalog => {
             setCatalog(catalog)
+            setFilterCatalog(catalog)
         })
         //if (user) return navigate("/login")
     }, [])
@@ -57,37 +61,56 @@ export default function Catalog() {
     }
 
     function handleClick(_id) {
-        // console.log("Clicou-me! " + _id)
         return navigate(`/catalog/content/${String(_id)}`)
     }
 
     function filter(e) {
         console.log(e.target.value)
-        // setCatalog(...catalog, catalog.filter(content => String(content.name).includes(e.target.value) == true))
+        setFilterCatalog(catalog.filter(content => (String(content.name)).toLowerCase().includes(e.target.value) == true))
     }
 
     return (
         <div>
-            <div>
-                <h1>CATALOGGGGGGG</h1>
-                {
-                    token ?
-                        <div>
-                            <p>{token}</p>
-                            <a href={`/user`}>USER: {user.username}</a>
-                            <br />
-                            <a href={`/login`}>SIGNOUT</a>
+            <div style={{ float: "left" }}> <img style={{ maxWidth: "25vh", maxHeight: "25vh" }} src={Logo} alt="" className="logo" /></div>
+            {
+                //<p>{token}</p>
+                //<a href={`/user`}>USER: {user.username}</a>
+                token ?
+                    <div style={{ float: "right", marginRight: "20px", marginTop: "10px" }}>
+                        <div
+                            className={styles.divAccount}
+                            onClick={() => navigate(`/user`)}
+                        >
+                            <img className={styles.iconAccount} src={imgAccount} alt="icon" />
+                            <p>{user.username}</p>
                         </div>
-                        :
-                        <a href={`/login`}>Login</a>
-                }
-                <br />
-                <input type="text" placeholder="Search" onChange={(e) => filter(e)}></input>
+                        <br />
+                        <a href={`/login`}>SIGNOUT</a>
+                    </div>
+                    :
+                    <div style={{ float: "right", marginRight: "20px", marginTop: "10px" }}>
+                        <div className={styles.divAccount}>
+                            <p onClick={() => navigate(`/login`)}>LOGIN</p>
+                        </div>
+                    </div>
+            }
+            <div>
+                <input className={styles.searchbar} type="text" placeholder="&#xF002; Search..." onChange={(e) => filter(e)}></input>
             </div>
 
-            <div style={{ display: "flex", flexDirection: "row", flexWrap: "wrap", gap: "10px" }}>
+            <h1 className={styles.title}>Catalog</h1>
+
+            <div
+                style={{
+                    display: "flex",
+                    flexDirection: "row",
+                    flexWrap: "wrap",
+                    gap: "25px",
+                    margin: "auto",
+                    width: "80%",
+                }}>
                 {
-                    catalog.map((content) => (
+                    filterCatalog.map((content) => (
                         <div key={content._id}>
                             <div className={styles.divseries} onClick={() => handleClick(content._id)} >
                                 <div className={styles.divImage} style={{

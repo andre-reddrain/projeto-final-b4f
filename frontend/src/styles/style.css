@@ -6,375 +6,412 @@
 }
 
 .logo {
-    width:400px;
-   margin: 20px;
-    align-items: center;
-    
-  
+  width: 400px;
+  margin: 20px;
+  align-items: center;
+
+
 }
+
 label {
-    font-size: 15px;
-    color: white;
-    font-family: 'Open Sans', sans-serif;
+  font-size: 15px;
+  color: white;
+  font-family: 'Open Sans', sans-serif;
 }
+
 body {
-    background-color: black;
-  }
+  background-color: black;
+}
+
 p {
-    font-size: 15px;
-    color: white;
-    font-family: 'Open Sans', sans-serif;
+  font-size: 15px;
+  color: white;
+  font-family: 'Open Sans', sans-serif;
 
 }
 
 
 
 .caixaTexto {
-    width: 350px;
-    height:35px;
-    box-shadow:none;
-     font-family: 'Open Sans', sans-serif;
-      font-size: 15px;  
-      margin-bottom: 20px; 
-      margin-left: 20px;
-      margin-right:20px ;
-      
+  width: 350px;
+  height: 35px;
+  box-shadow: none;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 15px;
+  margin-bottom: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+
 }
 
 /** ------- Edit Info + icon Lapis HYPERLINK ------ **/
 .lapis {
-    color: white;
-    align-items: center;
-      margin: 10px;
-   width: 40px;
+  color: white;
+  align-items: center;
+  margin: 10px;
+  width: 40px;
 
-   
+
 }
+
 .editInfo {
 
- font-family: 'Open Sans', sans-serif;
-    font-size: 15px;
-    color: white;
-    text-decoration: none;
-    display: flex;
-    align-items: center;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 15px;
+  color: white;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
 
 }
+
 /** ------- Forgot Password HYPERLINK------ **/
 .password {
-    font-family: 'Open Sans', sans-serif;
-    font-size: 15px;
-    color: white;
-    text-decoration: none;
-  
+  font-family: 'Open Sans', sans-serif;
+  font-size: 15px;
+  color: white;
+  text-decoration: none;
+
 }
 
 /** ------- Watch Review HYPERLINK ------ **/
 .review {
-    font-family: 'Roboto Mono', monospace;
-    color: white;
-    font-size: 15pxpx;
-    text-decoration: underline;
-    margin-left:275px;
+  font-family: 'Roboto Mono', monospace;
+  color: white;
+  font-size: 15pxpx;
+  text-decoration: underline;
+  margin-left: 275px;
 
 }
 
 /** ------- HOVER... Para todas as hiperligaçoes ------ **/
 a:hover {
-    color: rgb(217, 212, 212);
-  }
+  color: rgb(217, 212, 212);
+}
 
-  
+
 /** ------- TODOS OS H1 (TITULOS PAGINAS) ------ **/
 h1 {
-    font-size: 70px;
-    color: white;
-    font-family: 'Roboto Mono', monospace;
+  font-size: 70px;
+  color: white;
+  font-family: 'Roboto Mono', monospace;
 }
 
 /** ------- Icon Account + Nome Pessoa ------ **/
-.divAccount { 
-    font-size: 15px;
-    color: white;
-    font-family: 'Open Sans', sans-serif;
-    display: flex;
-    align-items: center;
+.divAccount {
+  font-size: 15px;
+  color: white;
+  font-family: 'Open Sans', sans-serif;
+  display: flex;
+  align-items: center;
 }
+
 .iconAccount {
-    margin: 10px;
-    width: 40px;
+  margin: 10px;
+  width: 40px;
 }
 
 /** ------- BOTOES ------ **/
 
-  .buttonList {
-      width: 100px;
-  }
+.buttonList {
+  width: 100px;
+}
 
-  .buttonBig2 {
-    color: white;
-    background-color: #A0001D;
-    font-family: 'Roboto Mono', monospace;
-    margin: 10px;
-    font-size: 20px;
-    width: 200px;height: 70px;
-    border-radius: 70px;
-    border-bottom: 0px;
-    border:none!important;
-}
-.buttonBig {
-    color: white;
-    background-color: #A0001D;
-    font-family: 'Roboto Mono', monospace;
-    margin: 10px;
-    font-size: 30px;
-    width: 200px;height: 70px;
-    border-radius: 70px;
-    border-bottom: 0px;
-    border:none!important;
-}
 .buttonBig2 {
   color: white;
   background-color: #A0001D;
   font-family: 'Roboto Mono', monospace;
   margin: 10px;
   font-size: 20px;
-  width: 200px;height: 70px;
+  width: 200px;
+  height: 70px;
   border-radius: 70px;
   border-bottom: 0px;
-  border:none!important;
+  border: none !important;
+}
+
+.buttonBig {
+  color: white;
+  background-color: #A0001D;
+  font-family: 'Roboto Mono', monospace;
+  margin: 10px;
+  font-size: 30px;
+  width: 200px;
+  height: 70px;
+  border-radius: 70px;
+  border-bottom: 0px;
+  border: none !important;
+}
+
+.buttonBig2 {
+  color: white;
+  background-color: #A0001D;
+  font-family: 'Roboto Mono', monospace;
+  margin: 10px;
+  font-size: 20px;
+  width: 200px;
+  height: 70px;
+  border-radius: 70px;
+  border-bottom: 0px;
+  border: none !important;
 }
 
 .buttonSmall {
-    color: white;
-    background-color: #A0001D;
-    font-family: 'Roboto Mono', monospace;
-    font-size: 15px;
-    margin: 10px;
-    width:100px;
-    height: 30px;
-    border-radius: 70px;
-    border-bottom: 0px;
-    border:none!important;
-    
+  color: white;
+  background-color: #A0001D;
+  font-family: 'Roboto Mono', monospace;
+  font-size: 15px;
+  margin: 10px;
+  width: 100px;
+  height: 30px;
+  border-radius: 70px;
+  border-bottom: 0px;
+  border: none !important;
+
 }
+
 /** ------- ICONES ------ **/
 
 .checked {
-    color: #A0001D;
+  color: #A0001D;
 }
+
 .notChecked {
-    color: white;
+  color: white;
 }
+
 .iconVisto {
-    width: 200px;
+  width: 200px;
 }
 
 /**-----CAIXA TEXTO REVIEW-----**/
 
 .reviewBox {
-    width: 50%;
-    height: 150px;
-    padding: 12px 20px;
-    box-sizing: border-box;
-    border: 2px solid #ccc;
-    border-radius: 4px;
-    background-color: #f8f8f8;
-    resize: none;
-    margin-left: 25%;
+  width: 50%;
+  height: 150px;
+  padding: 12px 20px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  background-color: #f8f8f8;
+  resize: none;
+  margin-left: 25%;
 }
 
 /** ------ GUI ------ **/
 .caixaemail {
-    width: 350px;
-    height:35px;
-    box-shadow:none;
-    font-family: 'Open Sans', sans-serif;
-    font-size: 15px;
+  width: 350px;
+  height: 35px;
+  box-shadow: none;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 15px;
 }
+
 .caixapassword {
   width: 350px;
-  height:35px;
-  box-shadow:none;
+  height: 35px;
+  box-shadow: none;
   font-family: 'Open Sans', sans-serif;
-font-size: 15px;   
+  font-size: 15px;
 }
-.firstName{
-   width: 200px;
-   height: 35px;
-}
-.lastName{
+
+.firstName {
   width: 200px;
   height: 35px;
 }
-.textEmail{
-   color:white;
-   margin-left: -370px;
+
+.lastName {
+  width: 200px;
+  height: 35px;
 }
-.textPassword{
-  color:white;
+
+.textEmail {
+  color: white;
+  margin-left: -370px;
+}
+
+.textPassword {
+  color: white;
   margin-left: -350px;
 }
-.caixaemail{
+
+.caixaemail {
   /*width: var(--largura-input)*/
-   height: 35px;
-   margin-left: 5px;
+  height: 35px;
+  margin-left: 5px;
 }
-.caixapassword{
-    width: 410px;
-    height: 35px;
-    font-family: 'Open Sans', sans-serif;
-    font-size: 15px;
-    background-color: white;
+
+.caixapassword {
+  width: 410px;
+  height: 35px;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 15px;
+  background-color: white;
 }
 
 .searchbar {
-        box-sizing: border-box;
-      }
-    
-      form.searchbar button {
-        float: left;
-        width: 410px;
-        height: 35px;
-        padding: 10px;
-        background:white;
-        color:black;
-        font-size: 17px;
-        text-align: left;
+  box-sizing: border-box;
+}
 
-        border: 1px solid grey; 
-        cursor: pointer;
-        border-radius: 25px;
-      }
-     
-     
+form.searchbar button {
+  float: left;
+  width: 410px;
+  height: 35px;
+  padding: 10px;
+  background: white;
+  color: black;
+  font-size: 17px;
+  text-align: left;
 
-      .divfilme{
-        color:white;
-        font-family: 'Open Sans', sans-serif;
-        font-size: 15px;
-      
-      }
+  border: 1px solid grey;
+  cursor: pointer;
+  border-radius: 25px;
+}
 
-      .box{
-        width: 235px;
-        height: 50px;
-        background-color:transparent;
-        border-bottom: 0px;
-      }
-      .checked {
-        color: #A0001D;
-    }
-    .watchingTime{
-      font-family: 'Roboto Mono', monospace;
-      color:#A0001D;
-      font-size: 50px;
-      text-align: center;
-    }
-    .Days11{
-      font-family: 'Roboto Mono', monospace;
-      color:white;
-      font-size: 50px;
-      text-align: center;
-    }
-    .boxSeries{
-      color:white;
-      width: 240px;
-      height: 150px;
-      font-family: 'Open Sans', sans-serif;
-      font-size: 15px;
-      vertical-align: baseline;
-      border:solid;
-      padding: 5px;
-    
-    }
-    .divLogin{
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      align-self: center;
-    }
-    .boxSeriesGrande{
-      color:white;
-      width: 200px;
-      height: 350px;
-      font-family: 'Open Sans', sans-serif;
-      font-size: 15px;
-      vertical-align: baseline;
-      border:solid;
-    }
-    .barraProgressoV{
-      background-color:#A0001D;
-      border-radius: 15px;
-      width: 200px;
-      border:none;
-    }
-    .barraProgressoC{
-      background-color:#444444;
-      border-radius: 15px;
-      width: 200px;
-      border:none;
-    }
-    .iconAdding{
-      text-align: end;
-    }
-    .boxNewMovie{
-      color:white;
-      width: 240px;
-      height: 150px;
-      font-family: 'Open Sans', sans-serif;
-      font-size: 15px;
-      vertical-align: baseline;
-      border:solid;
-      padding: 5px;
-    }
-    .newMovie{
-      background-color:#A0001D;
-      width: 70px;
-      height: 50px;
-      border:solid;
-      border:none;
-    }
-    .labelAndInput{
-        display: flex;
-        flex-direction: column;
-        text-align: left;
-      }
-  
-  
-      .formUsername{
-        display: flex;
-        flex-direction: column;
-        align-items: left;
-        align-self: center;
-        margin-left: -290px;
-  
-      }
-      .formEmail{
-        display: flex;
-        flex-direction: column;
-        align-items: left;
-        align-self: center;
-        margin-left: -320px;
-      }
-      .formBirthday{
-        display: flex;
-        flex-direction: column;
-        align-items: left;
-        align-self: center;
-        margin-left: -300px;
-      }
-      .formPassword{
-        display: flex;
-        flex-direction: column;
-        align-items: left;
-        align-self: center;
-        margin-left: -290px;
-      }
-      .formConfirmPassword{
-        display: flex;
-        flex-direction: column;
-        align-items: left;
-        align-self: center;
-        margin-left: -290px;
-      }
+
+
+.divfilme {
+  color: white;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 15px;
+
+}
+
+.box {
+  width: 235px;
+  height: 50px;
+  background-color: transparent;
+  border-bottom: 0px;
+}
+
+.checked {
+  color: #A0001D;
+}
+
+.watchingTime {
+  font-family: 'Roboto Mono', monospace;
+  color: #A0001D;
+  font-size: 50px;
+  text-align: center;
+}
+
+.Days11 {
+  font-family: 'Roboto Mono', monospace;
+  color: white;
+  font-size: 50px;
+  text-align: center;
+}
+
+.boxSeries {
+  color: white;
+  width: 240px;
+  height: 150px;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 15px;
+  vertical-align: baseline;
+  border: solid;
+  padding: 5px;
+
+}
+
+.divLogin {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-self: center;
+}
+
+.boxSeriesGrande {
+  color: white;
+  width: 200px;
+  height: 350px;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 15px;
+  vertical-align: baseline;
+  border: solid;
+}
+
+.barraProgressoV {
+  background-color: #A0001D;
+  border-radius: 15px;
+  width: 200px;
+  border: none;
+}
+
+.barraProgressoC {
+  background-color: #444444;
+  border-radius: 15px;
+  width: 200px;
+  border: none;
+}
+
+.iconAdding {
+  text-align: end;
+}
+
+.boxNewMovie {
+  color: white;
+  width: 240px;
+  height: 150px;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 15px;
+  vertical-align: baseline;
+  border: solid;
+  padding: 5px;
+}
+
+.newMovie {
+  background-color: #A0001D;
+  width: 70px;
+  height: 50px;
+  border: solid;
+  border: none;
+}
+
+.labelAndInput {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+
+.formUsername {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  align-self: center;
+  margin-left: -290px;
+
+}
+
+.formEmail {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  align-self: center;
+  margin-left: -320px;
+}
+
+.formBirthday {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  align-self: center;
+  margin-left: -300px;
+}
+
+.formPassword {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  align-self: center;
+  margin-left: -290px;
+}
+
+.formConfirmPassword {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  align-self: center;
+  margin-left: -290px;
+}
