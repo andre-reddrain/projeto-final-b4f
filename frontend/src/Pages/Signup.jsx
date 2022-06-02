@@ -26,12 +26,50 @@ export default function Signup() {
     }
 
     function handleSubmit(e) {
-        //console.log(username, email, birthday, password, confirmPassword)
+        let error = []
+        // Validações Username
+        if (username == "" || username == undefined) {
+            error.push("Por favor introduza um username.")
+        }
+
+        // Validações Email
+        if (email == "" || email == undefined) {
+            error.push("Por favor introduza o seu endereço de email.")
+        } else if (!validateEmail(email)) {
+            error.push("Por favor introduza um endereço de email válido.")
+        }
+
+        // Validações Data de Nascimento
+        if (birthday == "" || birthday == undefined) {
+            error.push("Por favor introduza uma data de nascimento.")
+        }
+
+        // Validações Password
+        if (password == "" || password == undefined) {
+            error.push("Por favor introduza a sua password.")
+        } else if (password.length < 8) {
+            error.push("A sua password deve ter no mínimo 8 caracteres.")
+        } else if (checkPasswordStrength(password) < 4) {
+            error.push("A sua password deve ter pelo menos um número, uma mínuscula, uma maiúscula e um símbolo.")
+        }
+
+        // Validações Password Confirmation
+        if (password != undefined) {
+            if (confirmPassword == "" || confirmPassword == undefined) {
+                error.push("Por favor introduza novamente a sua password.")
+            } else if (confirmPassword !== password) {
+                error.push("As passwords não coincidem.")
+            }
+        }
+
+        // console.log(error)
+        setErrors(error)
+
         e.preventDefault()
 
-        // TODO Validações Signup Frontend
-
-        signup(username, email, birthday, password, confirmPassword) // Vai enviar para o back-end
+        if (errors.length == 0) {
+            signup(username, email, birthday, password, confirmPassword) // Vai enviar para o back-end
+        }
     }
 
     async function signup(username, email, birthday, password, confirmPassword) {
@@ -51,47 +89,45 @@ export default function Signup() {
         const json = await res.json()
         if (res.status === 200) {
             localStorage.setItem('token', json.token)
-            navigate("/list") // vai mas o token tá fudido
+            navigate("/catalog") // vai mas o token tá fudido
         }
+    }
 
-        /* <div>
-            <form onSubmit={handleSubmit}>
-                {errors.length > 0
-                    && <span style={{ color: "red" }}>{errors}</span>
-                }
+    // Validações
+    function validateEmail(email) {
+        // Esta expressão regular não garante que email existe, nem que é válido
+        // No entanto deverá funcionar para a maior parte dos emails que seja necessário validar.
+        const EMAIL_REGEX = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+        return EMAIL_REGEX.test(email)
+    }
 
-                <label>Username</label>
-                <input type="text" value={username} onChange={(e) => handleUserInput(e, "username")} /> <br />
-
-                <label>Email</label>
-                <input type="text" value={email} onChange={(e) => handleUserInput(e, "email")} /> <br />
-
-                <label>Birthday</label>
-                <input type="text" value={birthday} onChange={(e) => handleUserInput(e, "birthday")} /> <br />
-
-                <label>Password</label>
-                <input type="password" value={password} onChange={(e) => handleUserInput(e, "password")} /> <br />
-
-                <label>Confirm Password</label>
-                <input type="password" value={confirmPassword} onChange={(e) => handleUserInput(e, "confirmPassword")} />
-
-                <input type="submit" />
-            </form>
-        </div>*/
+    function checkPasswordStrength(password) {
+        if (password.length < 8) return 0;
+        const regexes = [
+            /[a-z]/,
+            /[A-Z]/,
+            /[0-9]/,
+            /[~!@#$%^&*)(+=._-]/
+        ]
+        return regexes
+            .map(re => re.test(password))
+            .reduce((score, t) => t ? score + 1 : score, 0)
     }
 
     return (
-
-
         <div>
             <div> <img src={Logo} alt="" className="logo" /></div>
             <div className="divSignUp">
                 <h1>Welcome to The WATCHER</h1>
+                {/* {console.log(errors)} */}
 
                 <form onSubmit={handleSubmit}>
-                    {errors.length > 0
-                        && <span style={{ color: "red" }}>{errors}</span>
+                    {
+                        errors.map((error, i) => {
+                            return <p key={i} style={{ color: "red" }}>{String(error)}</p>
+                        })
                     }
+
                     <label className="formUsername">Username</label>
                     <input type="text" className="caixaTexto" value={username} onChange={(e) => handleUserInput(e, "username")} /> <br />
 

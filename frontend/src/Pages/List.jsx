@@ -1,5 +1,10 @@
 import { useEffect, useState } from "react"
 import { useNavigate } from "react-router-dom"
+import styles from "../styles/style.module.css"
+
+// FontAwesome
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faHeart } from '@fortawesome/free-solid-svg-icons'
 
 export default function List() {
     const token = localStorage.getItem("token")
@@ -8,9 +13,12 @@ export default function List() {
     const navigate = useNavigate()
 
     useEffect(() => {
-        fetchLogin().then((result) => {
-            setUser(result)
-        })
+        if (token) {
+            fetchLogin().then((result) => {
+                setUser(result)
+            })
+        }
+
         fetchList().then(list => {
             setList(list)
         })
@@ -45,43 +53,40 @@ export default function List() {
         return json
     }
 
-    /*
-    {
-                list !== null ?
-                    //console.log(list.progresses)
-                    //console.log(list.progresses[0][0])
-
-                    list.progresses.map((content) => (
-                        <div
-                            key={content.progressID}
-                        >
-                            <p>{content.progressID}</p>
-                        </div>
-                    ))
-
-                    :
-                    <h2>Lista Vazia</h2>
-            }
-    */
+    function handleClick(_id) {
+        // console.log("Clicou-me! " + _id)
+        return navigate(`/catalog/content/${String(_id)}`)
+    }
 
     return (
         <div>
-            <h1>LISTTTTTTTTAAAAAAAAAAAA</h1>
-            <p>{token}</p>
+            <h1>Lista de Utilizador</h1>
+            {/* <p>{token}</p> */}
             <p>{user.username}</p>
-            {
-                list !== null ?
+            <div style={{ display: "flex", flexDirection: "row", flexWrap: "wrap", gap: "10px" }}>
+                {
+                    list !== null ?
 
-                    list.map((progress) => (
-                        < div
-                            key={progress.content._id}
-                        >
-                            <p>{progress.content.name}</p>
-                        </div>
-                    ))
-                    :
-                    <h2>E</h2>
-            }
+                        list.map((progress) => (
+                            <div key={progress.content._id}>
+                                <div className={styles.divseries} onClick={() => handleClick(progress.content._id)} >
+                                    <div className={styles.divImage} style={{
+                                        backgroundImage: `url(${progress.content.image[0]}`
+                                    }}>
+                                    </div>
+                                    <div style={{ marginTop: "15vh", padding: "5px", paddingTop: "10px", textAlign: "left" }}>
+                                        {progress.content.name ? progress.content.name : progress.content.title}<br />
+                                        ({progress.content.releaseDate.substring(0, 4)})
+                                        <div style={{ float: "right", marginBottom: "5px" }}>
+                                            <FontAwesomeIcon icon={faHeart} style={{ color: "red" }}></FontAwesomeIcon> {Math.floor(Math.random() * (100 - 50 + 1)) + 50}%
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        ))
+                        : <h1>Lista vazia!</h1>
+                }
+            </div>
         </div >
     )
 }
