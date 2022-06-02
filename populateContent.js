@@ -1,7 +1,7 @@
 const { getCollection, getMongoCollection, DATABASE_NAME } = require('./backend/db')
 
 async function populateContent() {
-    const collection = await getMongoCollection(DATABASE_NAME,"content")
+    const collection = await getMongoCollection(DATABASE_NAME, "content")
     await collection.insertMany([
         {
             "type": 0,
@@ -11,7 +11,8 @@ async function populateContent() {
 
             ],
             "image": [
-                "https://alfalfastudio.s3.amazonaws.com/wp-content/uploads/2019/01/02213214/2019_Movie_Poster_Spider_Man_Into_the_Spider_Verse.jpg"
+                "https://entretenimento.plu7.com/wp-content/uploads/2022/03/Na-serie-de-TV-Halo-a-guerra-nao-e-um.jpg",
+                "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.latercera.com%2Fmouse%2Flos-nuevos-posters-de-la-serie-de-halo-muestran-en-detalle-a-sus-personajes%2F&psig=AOvVaw2snVc075DxVZnc4PEMRKCF&ust=1654254306275000&source=images&cd=vfe&ved=0CAwQjRxqFwoTCIjLttjPjvgCFQAAAAAdAAAAABAU"
             ],
             "releaseDate": "2022-03-24",
             "category": [
@@ -20,7 +21,7 @@ async function populateContent() {
             "totalEpisodes": 9,
             "seconds": 27420
         },
-        {       
+        {
             "type": 0,
             "name": "Stranger Things",
             "description": "When a young boy vanishes, a small town uncovers a mystery involving secret experiments, terrifying supernatural forces, and one strange little girl.",
@@ -28,7 +29,8 @@ async function populateContent() {
 
             ],
             "image": [
-                "https://i.pinimg.com/originals/bc/d5/c9/bcd5c9519581acc60bd60a429ab0c88f.jpg"
+                "https://conteudo.imguol.com.br/c/entretenimento/58/2022/05/12/novo-poster-da-quarta-temporada-de-stranger-things-1652368177430_v2_3x4.jpg",
+                "https://cailloupettismoviereviews.com/wp-content/uploads/2022/02/MV5BN2ZmYjg1YmItNWQ4OC00YWM0LWE0ZDktYThjOTZiZjhhN2Q2XkEyXkFqcGdeQXVyNjgxNTQ3Mjk@._V1_-1.jpg"
             ],
             "releaseDate": "2016-07-15",
             "category": [
@@ -45,7 +47,8 @@ async function populateContent() {
 
             ],
             "image": [
-                "https://i.pinimg.com/originals/bc/d5/c9/bcd5c9519581acc60bd60a429ab0c88f.jpg"
+                "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/6fc8d46a-311d-4d0f-8ca2-6cbdbdae2e8a/df3780y-4b585a39-ce4e-46d8-9b10-93ad163954c3.png/v1/fill/w_800,h_999,q_70,strp/moon_knight_fan_made_poster_by_lochana779_df3780y-pre.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTM1MCIsInBhdGgiOiJcL2ZcLzZmYzhkNDZhLTMxMWQtNGQwZi04Y2EyLTZjYmRiZGFlMmU4YVwvZGYzNzgweS00YjU4NWEzOS1jZTRlLTQ2ZDgtOWIxMC05M2FkMTYzOTU0YzMucG5nIiwid2lkdGgiOiI8PTEwODAifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.tIfPSeGJHh_I4hRpfVdxvi-sobViAvzqQsiwRcYScG8",
+                "https://m.media-amazon.com/images/M/MV5BYTc5OWNhYjktMThlOS00ODUxLTgwNDQtZjdjYjkyM2IwZTZlXkEyXkFqcGdeQXVyNTA3MTU2MjE@._V1_.jpg"
             ],
             "releaseDate": "2022-03-30",
             "category": [
@@ -62,7 +65,8 @@ async function populateContent() {
 
             ],
             "image": [
-                "https://i.pinimg.com/originals/bc/d5/c9/bcd5c9519581acc60bd60a429ab0c88f.jpg"
+                "https://sm.ign.com/ign_br/screenshot/default/spy-x-family_uu9g.jpg",
+                "https://img1.ak.crunchyroll.com/i/spire1/7c186f0cbe78d53cc327520b3b390a821649089667_main.jpg"
             ],
             "releaseDate": "2022-04-09",
             "category": [
@@ -79,7 +83,8 @@ async function populateContent() {
 
             ],
             "image": [
-                "https://i.pinimg.com/originals/bc/d5/c9/bcd5c9519581acc60bd60a429ab0c88f.jpg"
+                "https://www.kenyabuzz.com/lifestyle/wp-content/uploads/2020/10/Hidden-passion.jpg",
+                "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.tvtime.com%2Fpt_PT%2Fshow%2F169581&psig=AOvVaw062I0Mt91H1m8N92dsXoSW&ust=1654255418654000&source=images&cd=vfe&ved=0CAwQjRxqFwoTCPCx7efTjvgCFQAAAAAdAAAAABAD"
             ],
             "releaseDate": "2003-10-21",
             "category": [
@@ -96,7 +101,8 @@ async function populateContent() {
 
             ],
             "image": [
-                "https://i.pinimg.com/originals/bc/d5/c9/bcd5c9519581acc60bd60a429ab0c88f.jpg"
+                "https://mmc.tirto.id/image/otf/500x0/2022/05/11/welcome-to-eden_ratio-16x9.jpg",
+                "https://m.media-amazon.com/images/M/MV5BMTNiZTJlNTUtYTZiOC00MmQ2LTkzYTctMDcwMGJmNGEwYmU2XkEyXkFqcGdeQXVyMTMzODk3NDU0._V1_.jpg"
             ],
             "releaseDate": "2022-05-06",
             "category": [
@@ -113,7 +119,8 @@ async function populateContent() {
 
             ],
             "image": [
-                "https://i.pinimg.com/originals/bc/d5/c9/bcd5c9519581acc60bd60a429ab0c88f.jpg"
+                "https://observatoriodocinema.uol.com.br/wp-content/uploads/2022/03/peaky-blinders-1.jpg",
+                "https://cdn.europosters.eu/image/1300/posters/peaky-blinders-shelby-family-i120181.jpg"
             ],
             "releaseDate": "2013-09-12",
             "category": [
@@ -130,7 +137,9 @@ async function populateContent() {
 
             ],
             "image": [
-                "https://i.pinimg.com/originals/bc/d5/c9/bcd5c9519581acc60bd60a429ab0c88f.jpg"
+                "https://cdn.britannica.com/82/198682-050-0EB80673/cast-Greys-Anatomy.jpg",
+                "https://m.media-amazon.com/images/M/MV5BODA2Mjk0N2MtNGY0Mi00ZWFjLTkxODEtZDFjNDg4ZDliMGVmXkEyXkFqcGdeQXVyMzAzNTY3MDM@._V1_.jpg"
+
             ],
             "releaseDate": "2005-03-27",
             "category": [
@@ -147,7 +156,8 @@ async function populateContent() {
 
             ],
             "image": [
-                "https://i.pinimg.com/originals/bc/d5/c9/bcd5c9519581acc60bd60a429ab0c88f.jpg"
+                "https://movimentocountry.ig.com.br/wp-content/uploads/2022/03/pantanal-maior-aposta-globo.jpg",
+                "https://m.media-amazon.com/images/M/MV5BMDQzYzc4MGItYmMyZi00OGNkLWI5OWEtNTc3OTQ1MGYyOWVkXkEyXkFqcGdeQXVyNjI0NDkwNjE@._V1_.jpg"
             ],
             "releaseDate": "2022-03-28",
             "category": [
@@ -156,7 +166,7 @@ async function populateContent() {
             "totalEpisodes": 54,
             "seconds": 158880
         },
-        {   
+        {
             "type": 0,
             "name": "Star Trek: Strange New Worlds",
             "description": "Follow Christopher Pike, Spock and Number One in the years before Captain Kirk boarded the U.S.S. Enterprise, as they explore new worlds around the galaxy. This show is a prequel to the original series and Star Trek: Discovery.",
@@ -164,7 +174,8 @@ async function populateContent() {
 
             ],
             "image": [
-                "https://i.pinimg.com/originals/bc/d5/c9/bcd5c9519581acc60bd60a429ab0c88f.jpg"
+                "https://img.ibxk.com.br/2021/08/26/26102612091174.jpg",
+                "https://m.media-amazon.com/images/M/MV5BYWNlYmZkZjQtNjU5OS00YTNkLWJmOTEtYmZiMmUwZGI3NTM3XkEyXkFqcGdeQXVyMTM2NTIwMDIw._V1_.jpg"
             ],
             "releaseDate": "2022-05-05",
             "category": [
@@ -181,7 +192,8 @@ async function populateContent() {
 
             ],
             "image": [
-                "https://i.pinimg.com/originals/bc/d5/c9/bcd5c9519581acc60bd60a429ab0c88f.jpg"
+                "http://picl.com.fj/wp-content/uploads/2020/07/robinsonformat.png",
+                "https://m.media-amazon.com/images/M/MV5BNjM1MWE3NGUtMmE2Ny00ZDZlLTgxOWEtODFiYzU5YzU2MzcxXkEyXkFqcGdeQXVyMTQzMjU1NjE@._V1_.jpg"
             ],
             "releaseDate": "1997-09-13",
             "category": [
@@ -198,7 +210,8 @@ async function populateContent() {
 
             ],
             "image": [
-                "https://i.pinimg.com/originals/bc/d5/c9/bcd5c9519581acc60bd60a429ab0c88f.jpg"
+                "https://br.web.img3.acsta.net/newsv7/19/09/06/18/15/2133944.jpg",
+                "https://i.pinimg.com/736x/07/6e/3c/076e3c582ed5464ffaea6437df6e3572.jpg"
             ],
             "releaseDate": "2016-01-25",
             "category": [
@@ -215,7 +228,8 @@ async function populateContent() {
                 "Netflix"
             ],
             "image": [
-                "https://i.pinimg.com/originals/bc/d5/c9/bcd5c9519581acc60bd60a429ab0c88f.jpg"
+                "https://www.centralcomics.com/wp-content/uploads/2022/01/Allof-US-Are-Dead.jpg",
+                "https://www.themoviedb.org/t/p/w500/pTEFqAjLd5YTsMD6NSUxV6Dq7A6.jpg"
             ],
             "releaseDate": "2022-01-28",
             "category": [
@@ -232,7 +246,8 @@ async function populateContent() {
                 "AppleTV"
             ],
             "image": [
-                "https://i.pinimg.com/originals/bc/d5/c9/bcd5c9519581acc60bd60a429ab0c88f.jpg"
+                "https://techdoxx.com/wp-content/uploads/2021/10/the_flash_boots_1634405926609.jpg",
+                "https://m.media-amazon.com/images/M/MV5BMDIzNzYwNTctZWY4Mi00YjQ2LWI5YWYtMzdmNDgwMGI4Yzk1XkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_FMjpg_UX1000_.jpg"
             ],
             "releaseDate": "2014-10-07",
             "category": [
@@ -250,7 +265,8 @@ async function populateContent() {
                 "Amazon"
             ],
             "image": [
-                "https://i.pinimg.com/originals/bc/d5/c9/bcd5c9519581acc60bd60a429ab0c88f.jpg"
+                "https://mozananews.com/wp-content/uploads/2022/05/The-Quest.jpg",
+                "https://br.web.img2.acsta.net/pictures/22/04/26/14/23/2521517.jpg"
             ],
             "releaseDate": "2022-05-11",
             "category": [
@@ -267,7 +283,8 @@ async function populateContent() {
                 "AMC"
             ],
             "image": [
-                "https://i.pinimg.com/originals/bc/d5/c9/bcd5c9519581acc60bd60a429ab0c88f.jpg"
+                "https://static0.srcdn.com/wordpress/wp-content/uploads/2021/04/The-Walking-Dead-Season-11.jpg",
+                "https://cdn.europosters.eu/image/750/posters/the-walking-dead-city-i15032.jpg"
             ],
             "releaseDate": "2010-10-31",
             "category": [
@@ -285,7 +302,8 @@ async function populateContent() {
                 "Hulu"
             ],
             "image": [
-                "https://i.pinimg.com/originals/bc/d5/c9/bcd5c9519581acc60bd60a429ab0c88f.jpg"
+                "https://static01.nyt.com/images/2017/11/13/arts/13gooddoctor-1/12gooddoctor-1-articleLarge.jpg?quality=75&auto=webp&disable=upscale",
+                "https://static.wikia.nocookie.net/the-good-doctor/images/7/7a/3Poster1.png/revision/latest?cb=20190918074659"
             ],
             "releaseDate": "2017-09-25",
             "category": [
@@ -302,7 +320,8 @@ async function populateContent() {
                 "Hulu"
             ],
             "image": [
-                "https://i.pinimg.com/originals/bc/d5/c9/bcd5c9519581acc60bd60a429ab0c88f.jpg"
+                "https://febreteen.com.br/wp-content/uploads/2021/10/The-DAmelio-Show.jpg",
+                "https://br.web.img2.acsta.net/pictures/21/09/14/16/20/0582284.jpg"
             ],
             "releaseDate": "2021-09-03",
             "category": [
@@ -320,7 +339,8 @@ async function populateContent() {
                 "Amazon"
             ],
             "image": [
-                "https://i.pinimg.com/originals/bc/d5/c9/bcd5c9519581acc60bd60a429ab0c88f.jpg"
+                "https://static.tvtropes.org/pmwiki/pub/images/Iamnotananimal.jpg",
+                "https://cdn.animationexplore.com/catimg/472060.jpg"
             ],
             "releaseDate": "2004-05-10",
             "category": [
@@ -337,7 +357,8 @@ async function populateContent() {
                 "Netflix"
             ],
             "image": [
-                "https://i.pinimg.com/originals/bc/d5/c9/bcd5c9519581acc60bd60a429ab0c88f.jpg"
+                "https://www.aroged.com/wp-content/uploads/2022/03/Fascinating-cosplay-of-Jinx-from-Arcane-makes-fans-cheer.jpg",
+                "https://br.web.img3.acsta.net/pictures/21/11/16/14/35/2231192.jpg"
             ],
             "releaseDate": "2021-11-06",
             "category": [
@@ -354,7 +375,8 @@ async function populateContent() {
                 "Crunchyroll"
             ],
             "image": [
-                "https://i.pinimg.com/originals/bc/d5/c9/bcd5c9519581acc60bd60a429ab0c88f.jpg"
+                "https://images-ext-1.discordapp.net/external/V667ju30tNTP8FCx_FVEy0kysgk4-n0N48muMo9_u0I/https/labdicasjornalismo.com/images/noticias/6752/27032021094638_GIVEN_02_C.png?width=716&height=354",
+                "https://img1.ak.crunchyroll.com/i/spire2/b0ccaf974df65b4a74c0b84f3696ecd41562788869_main.jpg"
             ],
             "releaseDate": "2019-07-12",
             "category": [
@@ -373,7 +395,8 @@ async function populateContent() {
                 "Google Play"
             ],
             "image": [
-                "https://i.pinimg.com/originals/bc/d5/c9/bcd5c9519581acc60bd60a429ab0c88f.jpg"
+                "https://images-ext-2.discordapp.net/external/W2bjUeSs0hVjweVibb8NTVPNeklfhZH0MaRY9prgazE/https/www.repstatic.it/content/contenthub/img/2021/09/28/221358764-2d339ee2-14b5-4443-bf50-e74c5a5c21a2.jpg?width=716&height=406",
+                "https://images-ext-2.discordapp.net/external/4WC68egC0fuhhbv9K7eWihcBXvsQIoUXf3Ua8sTDAJs/%3Fw%3D584/https/universosesquecidos.files.wordpress.com/2017/08/poster2.jpg?width=498&height=702"
             ],
             "releaseDate": "1978-04-04",
             "category": [
@@ -390,7 +413,8 @@ async function populateContent() {
 
             ],
             "image": [
-                "https://i.pinimg.com/originals/bc/d5/c9/bcd5c9519581acc60bd60a429ab0c88f.jpg"
+                "https://images-ext-2.discordapp.net/external/aQyWH3F6krg58MEj549MYM68N_lnNwxK_GoEUJu-fgg/https/s2.glbimg.com/GhgplLzbQQC1sTJ-V3sakLrMMEk%3D/620x413/top/e.glbimg.com/og/ed/f/original/2021/09/01/image_dl7MnpV.png",
+                "https://images-ext-2.discordapp.net/external/cAlrQX410HYQBP4jSKyVOZpP6bqQw0WySvd-A7LTmOg/https/pictures.betaseries.com/fonds/poster/3916b3f0d626cedc956521337c06879c.jpg?width=477&height=701"
             ],
             "releaseDate": "2020-08-19",
             "category": [
@@ -407,7 +431,8 @@ async function populateContent() {
                 "Hulu"
             ],
             "image": [
-                "https://i.pinimg.com/originals/bc/d5/c9/bcd5c9519581acc60bd60a429ab0c88f.jpg"
+                "https://www.rbsdirect.com.br/imagesrc/35668451.jpg?w=700",
+                "https://olhardigital.com.br/wp-content/uploads/2022/04/The-Kardashians_Poster-819x1024.jpg"
             ],
             "releaseDate": "2022-04-14",
             "category": [
@@ -427,7 +452,8 @@ async function populateContent() {
                 "Funimation"
             ],
             "image": [
-                "https://i.pinimg.com/originals/bc/d5/c9/bcd5c9519581acc60bd60a429ab0c88f.jpg"
+                "https://images-ext-2.discordapp.net/external/srPUpy96yR3rFmIFu7huGE2mD4PRwiiW8M-ByOnIcOs/%3Ffit%3D1597%252C924%26ssl%3D1/https/i0.wp.com/animeeverything.online/wp-content/uploads/2019/07/991043.jpg?width=716&height=414",
+                "https://images-ext-2.discordapp.net/external/V8eZDrjJEqwQY2Ns8afiDTK6f88LaIeBcChAeYJRyKo/%3Fcb%3D20210530081017%26path-prefix%3Dpt-br/https/static.wikia.nocookie.net/dublagem/images/4/4b/The_Rising_of_the_Shield_Hero_Capa.jpg/revision/latest?width=502&height=702"
             ],
             "releaseDate": "2019-01-09",
             "category": [
@@ -444,7 +470,8 @@ async function populateContent() {
 
             ],
             "image": [
-                "https://i.pinimg.com/originals/bc/d5/c9/bcd5c9519581acc60bd60a429ab0c88f.jpg"
+                "https://images-ext-2.discordapp.net/external/pkuZUZZI8NYDamo84qE2FI87bKiQwJXEFfjV_fSMr0o/https/upload.wikimedia.org/wikipedia/en/f/f2/Run_BTS_title_card_%2528since_April_14%252C_2020%2529.png",
+                "https://images-ext-2.discordapp.net/external/xpe_zmLI3VuGIQaApE56fskcrWmGjj5lg3_2cr31KPk/%3Fv%3D1/https/i.mydramalist.com/p3l4r_4c.jpg"
             ],
             "releaseDate": "2015-08-01",
             "category": [
@@ -461,7 +488,8 @@ async function populateContent() {
                 "Crunchyroll"
             ],
             "image": [
-                "https://i.pinimg.com/originals/bc/d5/c9/bcd5c9519581acc60bd60a429ab0c88f.jpg"
+                "https://images-ext-1.discordapp.net/external/E5jjApP2vaOGE6SBnvDoHXQof7di0i7-yRsG6TdUVCI/https/i.ytimg.com/vi/xX6R_TTnPEA/maxresdefault.jpg?width=716&height=403",
+                "https://m.media-amazon.com/images/M/MV5BZTBlOTMyNzItNDc1OC00MTg0LThkYmQtOTg5NTI4NjAwNDIxXkEyXkFqcGdeQXVyMzgxODM4NjM@._V1_.jpg"
             ],
             "releaseDate": "2018-07-08",
             "category": [
@@ -478,7 +506,8 @@ async function populateContent() {
 
             ],
             "image": [
-                "https://i.pinimg.com/originals/bc/d5/c9/bcd5c9519581acc60bd60a429ab0c88f.jpg"
+                "https://images-ext-1.discordapp.net/external/w29W26EAu_ZkOtJcEzOZY3WOFP4hMVbHG0Gg6mkSVkc/%3Fcb%3D20210122030253%26path-prefix%3Dpt-br/https/static.wikia.nocookie.net/dublagem/images/c/c7/Metal_family.jpg/revision/latest?width=716&height=403",
+                "https://images-ext-1.discordapp.net/external/L3skivctAPA_wUeTaD-she8O58CvLz_RN2tDninVGXA/https/i.pinimg.com/originals/c9/3b/10/c93b10130b0b7b7287d86c18c2d15e07.png?width=397&height=702"
             ],
             "releaseDate": "2018-09-13",
             "category": [
@@ -500,7 +529,8 @@ async function populateContent() {
                 "Hulu"
             ],
             "image": [
-                "https://i.pinimg.com/originals/bc/d5/c9/bcd5c9519581acc60bd60a429ab0c88f.jpg"
+                "https://images-ext-1.discordapp.net/external/MgVksD_Dx9BbNIGOcRqwVsumT_O_x68yFK5NPrfbSi8/https/www.magazine-hd.com/apps/wp/wp-content/uploads/2019/12/the-promised-neverland1-1.jpg?width=716&height=379",
+                "https://images-ext-1.discordapp.net/external/tFaUJHnbaCBAVLYI6CjGNCAzrRc-_DGaGEHy767PoCQ/https/img1.ak.crunchyroll.com/i/spire2/07f56cb3c9220952600b0975a883b0f91546997210_full.jpg?width=468&height=702"
             ],
             "releaseDate": "2019-01-11",
             "category": [
@@ -517,7 +547,8 @@ async function populateContent() {
                 "Amazon"
             ],
             "image": [
-                "https://i.pinimg.com/originals/bc/d5/c9/bcd5c9519581acc60bd60a429ab0c88f.jpg"
+                "https://images-ext-2.discordapp.net/external/jl7v16YbHpNnvMQf-VYtIilmtA1rSRS0meq3VIBzZMM/https/ptanime.com/wp-content/uploads/2022/05/capabananafish.jpg?width=716&height=537",
+                "https://images-ext-1.discordapp.net/external/xiASKNzIZjZe0CmBtV_D8N3kAdIyZ6GBM6Fk6ndCSH4/https/upload.wikimedia.org/wikipedia/pt/d/d7/Banana_Fish_anime_artwork.jpg"
             ],
             "releaseDate": "2018-07-06",
             "category": [
@@ -536,7 +567,8 @@ async function populateContent() {
                 "Funimation"
             ],
             "image": [
-                "https://i.pinimg.com/originals/bc/d5/c9/bcd5c9519581acc60bd60a429ab0c88f.jpg"
+                "https://images-ext-1.discordapp.net/external/eSLE6Bvx5Qo2LUqKz5h6m74nul7wj2CYvp9nWfbd-u4/https/blogbeautifuldreams.files.wordpress.com/2017/10/your-lie-in-april-1.jpg?width=716&height=403",
+                "https://images-ext-2.discordapp.net/external/m9qA3pxEw465VpkPeas-_DIpuGh89zKwC1il4NxGnnQ/https/img1.ak.crunchyroll.com/i/spire3/40e6c04e05ce1efb08815b870a6d39331412797514_full.jpg?width=468&height=702"
             ],
             "releaseDate": "2014-10-10",
             "category": [
@@ -554,7 +586,8 @@ async function populateContent() {
                 "Funimation"
             ],
             "image": [
-                "https://i.pinimg.com/originals/bc/d5/c9/bcd5c9519581acc60bd60a429ab0c88f.jpg"
+                "https://images-ext-2.discordapp.net/external/gP1eeXegamBS8jkhEY_h8knXMN1afVfOHpLxWWd0PJ4/https/images-na.ssl-images-amazon.com/images/I/814MGL1gcTL._RI_.jpg?width=716&height=537",
+                "https://images-ext-2.discordapp.net/external/O64Rel2m9rIrqXBBF6O4DMZCVLJrn-vBJKZiRs9KJiI/https/ptanime.com/wp-content/uploads/2020/09/SK8-the-Infinity-original-anime-BONES-1st-teaser-poster-visual.jpg?width=494&height=701"
             ],
             "releaseDate": "2021-01-10",
             "category": [
@@ -571,7 +604,8 @@ async function populateContent() {
                 "Netflix"
             ],
             "image": [
-                "https://i.pinimg.com/originals/bc/d5/c9/bcd5c9519581acc60bd60a429ab0c88f.jpg"
+                "https://images-ext-2.discordapp.net/external/8IzvBEd82uI5l-Y2WLUAVZrKSYEQvrWXNxn1jX_lXmc/https/serialcookies.com.br/wp-content/uploads/2020/02/sci.jpg?width=716&height=403",
+                "https://images-ext-1.discordapp.net/external/hnIVtWTL_b-uTjYDPKaVp1NTz55F13RxyeOlMM0Kl0M/https/pictures.betaseries.com/fonds/poster/a86b7d6044ad1f5b1793732a5decf963.jpg?width=477&height=701"
             ],
             "releaseDate": "2018-04-25",
             "category": [
@@ -588,7 +622,8 @@ async function populateContent() {
                 "Hulu"
             ],
             "image": [
-                "https://i.pinimg.com/originals/bc/d5/c9/bcd5c9519581acc60bd60a429ab0c88f.jpg"
+                "https://images-ext-1.discordapp.net/external/vOw_OahFTU5B0Lxt1nM6pmf3hq4s4ar3qrFldgNL4s8/https/4.bp.blogspot.com/-sCNNIlr8ayU/WudU8skuXbI/AAAAAAAAU1M/Z6-W_-Nw3HIigwIcB__OAthjxeplhT9bwCLcBGAs/s1600/Maid-sama%252Bcop.jpg?width=716&height=403",
+                "https://images-ext-2.discordapp.net/external/er7LBkSZzcMdrLMxZ__azvhocjz7RAzlJG6oqf4NQ2s/https/www.themoviedb.org/t/p/original/igkn0M1bgMeATz59LShvVxZNdVd.jpg?width=468&height=702"
             ],
             "releaseDate": "2010-04-02",
             "category": [
@@ -605,7 +640,8 @@ async function populateContent() {
                 "Netflix"
             ],
             "image": [
-                "https://i.pinimg.com/originals/bc/d5/c9/bcd5c9519581acc60bd60a429ab0c88f.jpg"
+                "https://streamingsbrasil.com/wp-content/uploads/2021/11/Young-Royals-2-Banner-1130x580.jpg",
+                "https://images-ext-2.discordapp.net/external/yPJz8UNEK3kampuIzV6yyaGcS0wOPVb6t0Y6eGfDqXI/https/m.media-amazon.com/images/M/MV5BY2ZiMDZhNTUtMWMwNy00ODVmLTliYWItN2U0NDE4OGNmNTgyXkEyXkFqcGdeQXVyNjc3MjQzNTI%40._V1_.jpg?width=477&height=701"
             ],
             "releaseDate": "2021-07-01",
             "category": [
@@ -624,7 +660,8 @@ async function populateContent() {
                 "Funimation"
             ],
             "image": [
-                "https://i.pinimg.com/originals/bc/d5/c9/bcd5c9519581acc60bd60a429ab0c88f.jpg"
+                "https://images-ext-2.discordapp.net/external/GT4-pnswT1A5YPhJkBYTINy9ozV_bWkW2AtNhS8gcQ0/https/cdn.europosters.eu/image/1300/posters/my-hero-academia-line-up-i99111.jpg?width=716&height=478",
+                "https://animesbr.biz/wp-content/uploads/2019/07/phuYuzqWW9ru8EA3HVjE9W2Rr3M.jpg"
             ],
             "releaseDate": "2016-04-03",
             "category": [
@@ -641,7 +678,8 @@ async function populateContent() {
                 "Netflix"
             ],
             "image": [
-                "https://i.pinimg.com/originals/bc/d5/c9/bcd5c9519581acc60bd60a429ab0c88f.jpg"
+                "https://images-ext-2.discordapp.net/external/ai012Jf5sF2S3V7anpRfFgFZyDQNDxnEHb-KO0S-Ul8/https/m.media-amazon.com/images/M/MV5BNjZlY2MzYzgtODJlOC00YmYwLWE4MjUtODUxMTIyNmIzZmY2XkEyXkFqcGdeQXVyMTE2MDU0NzAw._V1_.jpg?width=716&height=424",
+                "https://images-ext-2.discordapp.net/external/vsE0wqcJ_i44APFk5c1Mat7pB3ZdpwXSPtfTMmkRQoM/https/br.web.img3.acsta.net/pictures/21/12/03/15/42/0565547.jpg?width=526&height=701"
             ],
             "releaseDate": "2021-02-20",
             "category": [
@@ -658,7 +696,8 @@ async function populateContent() {
                 "Netflix"
             ],
             "image": [
-                "https://i.pinimg.com/originals/bc/d5/c9/bcd5c9519581acc60bd60a429ab0c88f.jpg"
+                "https://wp-content.bluebus.com.br/wp-content/uploads/2013/09/Breaking-Bad.jpg",
+                "https://images-ext-1.discordapp.net/external/jNyfy-bKYOlMvniyr9gTeONasnI7c0_wB8HMAO01IM8/https/m.media-amazon.com/images/M/MV5BODFhZjAwNjEtZDFjNi00ZTEyLThkNzUtMjZmOWM2YjQwODFmXkEyXkFqcGdeQXVyMjQwMDg0Ng%40%40._V1_FMjpg_UX1000_.jpg?width=468&height=702"
             ],
             "releaseDate": "2008-01-19",
             "category": [
@@ -679,7 +718,8 @@ async function populateContent() {
                 "Youtube"
             ],
             "image": [
-                "https://i.pinimg.com/originals/bc/d5/c9/bcd5c9519581acc60bd60a429ab0c88f.jpg"
+                "https://images.theconversation.com/files/448820/original/file-20220228-20-1xn1tw4.jpeg?ixlib=rb-1.1.0&q=45&auto=format&w=1200&h=1200.0&fit=crop",
+                "https://images-ext-1.discordapp.net/external/2oNfGT5azamR-k12T6NEH1AumMbRHsNMH5m2iUdA5Pc/https/c8.alamy.com/comp/CB6D8E/the-godfather-1972-poster-godf-001vs-moviestore-collection-ltd-CB6D8E.jpg?width=371&height=702"
             ],
             "releaseDate": "1972-03-14",
             "category": [
@@ -699,7 +739,8 @@ async function populateContent() {
                 "AppleTV"
             ],
             "image": [
-                "https://i.pinimg.com/originals/bc/d5/c9/bcd5c9519581acc60bd60a429ab0c88f.jpg"
+                "https://static.timesofisrael.com/www/uploads/2017/07/goth.jpg",
+                "https://img.goldposter.com/2015/04/Schindlers-List_poster_goldposter_com_33.jpg"
             ],
             "releaseDate": "1993-11-30",
             "category": [
@@ -707,7 +748,7 @@ async function populateContent() {
             ],
             "totalEpisodes": 1,
             "seconds": 11700
-            
+
         },
         {
             "type": 1,
@@ -720,7 +761,8 @@ async function populateContent() {
                 "AppleTV"
             ],
             "image": [
-                "https://i.pinimg.com/originals/bc/d5/c9/bcd5c9519581acc60bd60a429ab0c88f.jpg"
+                "https://images-ext-1.discordapp.net/external/a5zXwDrZW8Bbb4Obf1ysxVZOPzfFFHUMFop-RJkyHFo/https/www.ourgoldenage.com.au/film/the-godfather-part-ii/GAC_The%2520Godfather%2520Part%2520II.jpg?width=716&height=477",
+                "https://m.media-amazon.com/images/M/MV5BMWMwMGQzZTItY2JlNC00OWZiLWIyMDctNDk2ZDQ2YjRjMWQ0XkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_.jpg"
             ],
             "releaseDate": "1974-12-20",
             "category": [
@@ -741,7 +783,8 @@ async function populateContent() {
                 "Youtube"
             ],
             "image": [
-                "https://i.pinimg.com/originals/bc/d5/c9/bcd5c9519581acc60bd60a429ab0c88f.jpg"
+                "https://images-ext-2.discordapp.net/external/z--6itgpmAtjIijTY8vBK3kTQbURASlSkDAGG9gNmwE/https/img1.ak.crunchyroll.com/i/spire4/a31e8373dd6ce2cefd1007f8f96312eb1632160178_main.jpg?width=716&height=403",
+                "https://m.media-amazon.com/images/M/MV5BMjlmZmI5MDctNDE2YS00YWE0LWE5ZWItZDBhYWQ0NTcxNWRhXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_.jpg"
             ],
             "releaseDate": "2001-07-20",
             "category": [
@@ -749,7 +792,7 @@ async function populateContent() {
             ],
             "totalEpisodes": 1,
             "seconds": 7500
-            
+
         },
         {
             "type": 1,
@@ -762,7 +805,8 @@ async function populateContent() {
                 "Youtube"
             ],
             "image": [
-                "https://i.pinimg.com/originals/bc/d5/c9/bcd5c9519581acc60bd60a429ab0c88f.jpg"
+                "https://images-ext-2.discordapp.net/external/J2dv0Vg1BNF7CG852rBu7wGeVAZWEd976pV4e9zsdsE/https/cinemaplanet.pt/wp-content/uploads/2020/01/parasite..jpg?width=716&height=358",
+                "https://m.media-amazon.com/images/M/MV5BYWZjMjk3ZTItODQ2ZC00NTY5LWE0ZDYtZTI3MjcwN2Q5NTVkXkEyXkFqcGdeQXVyODk4OTc3MTY@._V1_.jpg"
             ],
             "releaseDate": "2019-05-30",
             "category": [
@@ -770,7 +814,7 @@ async function populateContent() {
             ],
             "totalEpisodes": 1,
             "seconds": 7980
-            
+
         },
         {
             "type": 1,
@@ -783,7 +827,8 @@ async function populateContent() {
                 "Youtube"
             ],
             "image": [
-                "https://i.pinimg.com/originals/bc/d5/c9/bcd5c9519581acc60bd60a429ab0c88f.jpg"
+                "https://media.gq.com/photos/5b4dfa2c9eea1c27bfdb9e9b/16:9/w_1942,h_1092,c_limit/10-year-anniversary-the-dark-knight-gq.jpg",
+                "https://upload.wikimedia.org/wikipedia/pt/thumb/b/b7/TheDarkKnightRises.jpg/225px-TheDarkKnightRises.jpg"
             ],
             "releaseDate": "2008-07-14",
             "category": [
@@ -803,7 +848,8 @@ async function populateContent() {
                 "Youtube"
             ],
             "image": [
-                "https://i.pinimg.com/originals/bc/d5/c9/bcd5c9519581acc60bd60a429ab0c88f.jpg"
+                "https://images-ext-1.discordapp.net/external/33dpakrXvpPD2sEGIWPsjkaaa-Je-bm0-7grXgG5Hm0/https/images.immediate.co.uk/remote/images.atlas.metabroadcast.com/api.pressassociation.com/content/07d1daf4-f2c2-5164-8128-741807118d36.jpg?width=716&height=403",
+                "https://images-ext-2.discordapp.net/external/cu4JSiXxtLE5lkKzW9rt7DvnIPNe3RCSUfueX8dzV4A/https/images.saymedia-content.com/.image/t_share/MTc0MzkwMjYyMjIxNTE0Mzc0/should-i-watch-the-lord-of-the-rings-the-return-of-the-king.jpg?width=474&height=702"
             ],
             "releaseDate": "2003-12-01",
             "category": [
@@ -820,7 +866,8 @@ async function populateContent() {
                 "Amazon"
             ],
             "image": [
-                "https://i.pinimg.com/originals/bc/d5/c9/bcd5c9519581acc60bd60a429ab0c88f.jpg"
+                "https://m.media-amazon.com/images/M/MV5BZTEwZDYwZDgtOWFiNi00YThhLTk4MjMtNDg4ZmJjYTU0M2RiXkEyXkFqcGdeQXVyMTA4ODQyNDYx._V1_.jpg",
+                "https://images-ext-1.discordapp.net/external/uizqtlDryzvjezHe13Y76vQRpY8tT32TS9O_z6s93NE/https/m.media-amazon.com/images/M/MV5BZTEwZDYwZDgtOWFiNi00YThhLTk4MjMtNDg4ZmJjYTU0M2RiXkEyXkFqcGdeQXVyMTA4ODQyNDYx._V1_FMjpg_UX1000_.jpg?width=468&height=702"
             ],
             "releaseDate": "2020-05-29",
             "category": [
@@ -837,7 +884,8 @@ async function populateContent() {
                 "Amazon"
             ],
             "image": [
-                "https://i.pinimg.com/originals/bc/d5/c9/bcd5c9519581acc60bd60a429ab0c88f.jpg"
+                "https://images-ext-1.discordapp.net/external/tdEW_wTtfxDi8AsMt22E5MefHvg5xfZvNicyAQUllYE/https/fangirlish.com/wp-content/uploads/2021/11/Gabriels-Rapture-kiss.jpg?width=716&height=403",
+                "https://m.media-amazon.com/images/M/MV5BMzk3NzEwMWItYmVhMS00ODRiLWEyNDUtOTNmZTBhMDNjMjFmXkEyXkFqcGdeQXVyMTY1NjM1Nzc@._V1_.jpg"
             ],
             "releaseDate": "2020-07-31",
             "category": [
@@ -854,7 +902,8 @@ async function populateContent() {
                 "Amazon"
             ],
             "image": [
-                "https://i.pinimg.com/originals/bc/d5/c9/bcd5c9519581acc60bd60a429ab0c88f.jpg"
+                "https://m.media-amazon.com/images/M/MV5BNjJmNTZjZTUtYzllMS00NzBhLTlhMjgtNTkxNGQ4ZjI0YzI4XkEyXkFqcGdeQXVyMTY1NjM1Nzc@._V1_.jpg",
+                "https://images-ext-1.discordapp.net/external/g2Weuzyg8P1RDx2wK2tLgWCAXLRXxhlAzavBDUw22PU/https/ifthereviewsfit.files.wordpress.com/2020/12/72ebf-0ktaecbowvkacmszo.jpg?width=468&height=702"
             ],
             "releaseDate": "2020-11-19",
             "category": [
@@ -876,7 +925,8 @@ async function populateContent() {
                 "AppleTV"
             ],
             "image": [
-                "https://i.pinimg.com/originals/bc/d5/c9/bcd5c9519581acc60bd60a429ab0c88f.jpg"
+                "https://quecurso.com.br/blog/wp-content/uploads/2018/02/curso-de-danca-pulp-fiction-capa.jpg",
+                "https://images-ext-2.discordapp.net/external/11-1rbQ2ZTysYD5YxmfUzYFtevNCPja614VdvXgE5hg/https/i.pinimg.com/736x/33/11/84/331184826a94935bdf4af78a92be86c0--john-travolta-movieposter.jpg"
             ],
             "releaseDate": "1994-09-10",
             "category": [
@@ -897,7 +947,8 @@ async function populateContent() {
                 "AppleTV"
             ],
             "image": [
-                "https://i.pinimg.com/originals/bc/d5/c9/bcd5c9519581acc60bd60a429ab0c88f.jpg"
+                "https://images-ext-2.discordapp.net/external/bwWiPNFXccHLHm9PPLPhKOH-DCSx01CJeCavOT9POB0/%3Ffit%3D1600%252C1000/https/www.denofgeek.com/wp-content/uploads/2022/02/The-Green-Mile-Hanks-Duncan.jpg?width=716&height=448",
+                "https://images-ext-1.discordapp.net/external/KmPTGLnwr0S-Z7fqP9dAcwjxfz4W6LEpFsu7qN0S4Aw/https/nathanburgessinsights.files.wordpress.com/2018/10/img_1794.jpg"
             ],
             "releaseDate": "1999-12-10",
             "category": [
@@ -1060,11 +1111,11 @@ async function populateEpisodes() {
 populateContent()
     .then(() => console.log("Content has been populated"))
     .catch((err) => console.log(err))
-    
-populateSeasons()
-    .then(() => console.log("Season has been populated"))
-    .catch((err) => console.log(err))
 
-populateEpisodes()
-    .then(() => console.log("Episode has been populated"))
-    .catch((err) => console.log(err))
+// populateSeasons()
+//     .then(() => console.log("Season has been populated"))
+//     .catch((err) => console.log(err))
+
+// populateEpisodes()
+//     .then(() => console.log("Episode has been populated"))
+//     .catch((err) => console.log(err))

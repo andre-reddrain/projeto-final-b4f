@@ -114,7 +114,8 @@ export default function Catalog() {
                         <div key={content._id}>
                             <div className={styles.divseries} onClick={() => handleClick(content._id)} >
                                 <div className={styles.divImage} style={{
-                                    backgroundImage: `url(${content.image[0]}`
+                                    backgroundImage: `url(${content.image[0]}`,
+                                    backgroundPosition: "top"
                                 }}>
                                 </div>
                                 <div style={{ marginTop: "15vh", padding: "5px", paddingTop: "10px", textAlign: "left" }}>
