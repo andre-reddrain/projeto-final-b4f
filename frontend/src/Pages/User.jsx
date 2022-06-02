@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react"
 import { useNavigate } from "react-router-dom"
 import { secondsToMinutes, secondsToHours } from "../components/validate"
+import Logo from '../styles/Images/LogobRed.svg'
 
 export default function Content() {
     const token = localStorage.getItem("token")
@@ -47,8 +48,8 @@ export default function Content() {
         return json
     }
 
-    if (edit) {
-        return (
+
+    /*       return (
             <div>
                 <h1>USER</h1>
                 <p>{token}</p>
@@ -90,6 +91,59 @@ export default function Content() {
                 >Editar</button>
                 <p> Time whatched: {secondsToHours(time)}</p>
                 <a href={`/list`}>Lista</a>
+            </div>
+        )
+    }
+
+
+}*/
+
+    if (edit) {
+        return (
+            <div className="divEdit">
+                <h1>My Account</h1>
+                <p>{token}</p>
+                <input
+                    className="caixaTexto"
+                    type="text"
+                    placeholder="Username..."
+                    defaultValue={user.username}
+                />
+                <input className="caixaTexto"
+
+                    type="text"
+                    placeholder="Birthday..."
+                    defaultValue={user.birthday}
+                />
+                <input
+                    className="caixaTexto"
+                    type="text"
+                    placeholder="Email..."
+                    defaultValue={user.email}
+                />
+
+                <button className="buttonSmall"
+                    onClick={() => setEdit(false)}
+                >Voltar</button>
+            </div>
+        )
+    } else {
+        return (
+            <div>
+                <h1>My Account</h1>
+                <p>{token}</p>
+                <p>{user.username}</p>
+                <p >Birthday: {user.birthday}</p>
+                <p>Email: {user.email}</p>
+                <button onClick={() => navigate(`/`)} className="buttonSmall">Voltar</button>
+
+                <div>
+                    <button className="buttonSmall"
+                        onClick={() => setEdit(true)}
+                    >Editar</button>
+                </div>
+                <p className="timeWatch"> Time whatched: <br /> {secondsToHours(time)}</p>
+                <button className="buttonBig" onClick={() => navigate(`/list`)}>Lista</button>
             </div>
         )
     }
