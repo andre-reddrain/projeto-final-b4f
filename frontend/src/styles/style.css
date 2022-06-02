@@ -301,11 +301,6 @@ h1 {
   margin-left: -370px;
 }
 
-.textPassword {
-  color: white;
-  margin-left: -350px;
-}
-
 .caixaemail {
   /*width: var(--largura-input)*/
   height: 35px;
@@ -455,7 +450,7 @@ form.searchbar button {
   flex-direction: column;
   align-items: left;
   align-self: center;
-  margin-left: -300px;
+  margin-left: 270px;
 }
 
 .formPassword {
@@ -492,14 +487,6 @@ form.searchbar button {
 }
 
 .formPassword {
-  display: flex;
-  flex-direction: column;
-  align-items: left;
-  align-self: center;
-  margin-left: -290px;
-}
-
-.formConfirmPassword {
   display: flex;
   flex-direction: column;
   align-items: left;
@@ -668,14 +655,6 @@ form.searchbar button {
   margin-left: -290px;
 }
 
-.formConfirmPassword {
-  display: flex;
-  flex-direction: column;
-  align-items: left;
-  align-self: center;
-  margin-left: -230px;
-}
-
 
 form.searchbar button {
   float: left;
@@ -838,6 +817,5 @@ form.searchbar button {
   display: flex;
   flex-direction: column;
   align-items: left;
-  align-self: center;
-  margin-left: -290px;
+  margin-left: -235px;
 }
