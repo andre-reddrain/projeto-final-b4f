@@ -64,6 +64,7 @@ export default function Content() {
                 contentId: content._id
             })
         })
+        alert("Adicionado à sua lista!")
     }
 
     return (
