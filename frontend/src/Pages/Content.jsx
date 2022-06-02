@@ -149,7 +149,7 @@ export default function Content() {
                 <button
                     onClick={() => add()}
                 >Adicionar
-            </button>
+                </button>
             }
             <button onClick={() => navigate(`/catalog`)} className="buttonBig2">Voltar</button>
         </div>
